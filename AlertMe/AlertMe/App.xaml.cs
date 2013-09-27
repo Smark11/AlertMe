@@ -30,6 +30,7 @@ namespace AlertMe
         public static string gContact1Enabled;
         public static string gContact2Enabled;
         public static string gPlayAlarm;
+        public static int gSendTextCount;
 
         /// <summary>
         /// Constructor for the Application object.

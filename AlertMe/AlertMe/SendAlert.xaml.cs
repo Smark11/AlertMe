@@ -27,7 +27,7 @@ namespace AlertMe
         public SendAlert()
         {
             InitializeComponent();
-            Addresses = new ObservableCollection<string>();
+            Addresses = new List<string>();
 
             GetGPSLocation();
 
@@ -96,8 +96,8 @@ namespace AlertMe
             }
         }
 
-        private ObservableCollection<string> _addresses;
-        public ObservableCollection<string> Addresses
+        private List<string> _addresses;
+        public List<string> Addresses
         {
             get { return _addresses; }
             set
