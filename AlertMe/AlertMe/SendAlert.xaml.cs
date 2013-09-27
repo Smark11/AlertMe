@@ -13,6 +13,7 @@ using Windows.Devices.Geolocation;
 using Microsoft.Phone.Maps.Services;
 using System.Device.Location;
 using System.Collections.ObjectModel;
+using Microsoft.Phone.Tasks;
 
 namespace AlertMe
 {
@@ -26,6 +27,9 @@ namespace AlertMe
         public SendAlert()
         {
             InitializeComponent();
+            Addresses = new ObservableCollection<string>();
+
+            GetGPSLocation();
 
             ClockValue = App.gDefaultCountdown;
             ClockValueString = ClockValue.ToString(@"\:s");
@@ -34,12 +38,8 @@ namespace AlertMe
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             dispatcherTimer.Start();
-
-            Addresses = new ObservableCollection<string>();
-
-            this.DataContext = this;
-
-            GetGPSLocation();
+        
+            this.DataContext = this;         
         }
 
         #region "Properties"
@@ -136,12 +136,29 @@ namespace AlertMe
         {
             try
             {
-
+                SmsComposeTask smsComposeTask = new SmsComposeTask();
+                
+                smsComposeTask.To = "123-45-45";
+                smsComposeTask.Body = "My location is: " + Addresses.Count;
+                smsComposeTask.Show();
             }
             catch (Exception)
             {
+            }
+        }
 
-                throw;
+        private void SendEmail()
+        {
+            try
+            {
+                EmailComposeTask emailCompuser = new EmailComposeTask();
+               
+                emailCompuser.Subject = "GPS Location";
+                emailCompuser.Body = "This is a test email";
+                emailCompuser.Show();
+            }
+            catch (Exception)
+            {
             }
         }
 
@@ -164,7 +181,7 @@ namespace AlertMe
                 reverseGeocode.QueryAsync();
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
             }
         }

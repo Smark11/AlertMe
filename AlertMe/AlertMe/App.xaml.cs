@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using AlertMe.Resources;
+using Common.IsolatedStoreage;
 
 namespace AlertMe
 {
@@ -19,6 +20,16 @@ namespace AlertMe
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
         public static TimeSpan gDefaultCountdown;
+        public static string gYourName;
+        public static string gContact1Name;
+        public static string gContact1Email;
+        public static string gContact1Phone;
+        public static string gContact2Name;
+        public static string gContact2Email;
+        public static string gContact2Phone;
+        public static string gContact1Enabled;
+        public static string gContact2Enabled;
+        public static string gPlayAlarm;
 
         /// <summary>
         /// Constructor for the Application object.
@@ -55,9 +66,123 @@ namespace AlertMe
                 // Caution:- Use this under debug mode only. Application that disables user idle detection will continue to run
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
+
+                GetCountdownDefaultTime();
+                GetContactInfo();
             }
 
         }
+
+        #region "Methods"
+        private void GetCountdownDefaultTime()
+        {
+            string countdownAlarmValue = string.Empty;
+
+            if (IS.GetSettingStringValue("DefaultCountdown") == string.Empty)
+            {              
+                App.gDefaultCountdown = new TimeSpan(0, 0, 5); ;
+            }
+            else
+            {
+                countdownAlarmValue = IS.GetSettingStringValue("DefaultCountdown");               
+                App.gDefaultCountdown = TimeSpan.Parse(countdownAlarmValue);
+            }
+
+            if (IS.GetSettingStringValue("PlayAlarm") == string.Empty)
+            {
+                App.gPlayAlarm = "NO";
+            }
+            else
+            {
+                App.gPlayAlarm = IS.GetSettingStringValue("PlayAlarm");
+            }
+        }
+
+        private void GetContactInfo()
+        {
+            if (IS.GetSettingStringValue("YourName") == string.Empty)
+            {
+                App.gYourName = "";
+            }
+            else
+            {              
+                App.gYourName = IS.GetSettingStringValue("YourName");              
+            }
+
+            if (IS.GetSettingStringValue("Contact1Name") == string.Empty)
+            {
+                App.gContact1Name = "";
+            }
+            else
+            {
+                App.gContact1Name = IS.GetSettingStringValue("Contact1Name");
+            }
+
+            if (IS.GetSettingStringValue("Contact1Email") == string.Empty)
+            {
+                App.gContact1Email = "";
+            }
+            else
+            {
+                App.gContact1Email = IS.GetSettingStringValue("Contact1Email");
+            }
+
+            if (IS.GetSettingStringValue("Contact1Phone") == string.Empty)
+            {
+                App.gContact1Phone = "";
+            }
+            else
+            {
+                App.gContact1Phone = IS.GetSettingStringValue("Contact1Phone");
+            }
+
+            if (IS.GetSettingStringValue("Contact2Name") == string.Empty)
+            {
+                App.gContact2Name = "";
+            }
+            else
+            {
+                App.gContact2Name = IS.GetSettingStringValue("Contact2Name");
+            }
+
+            if (IS.GetSettingStringValue("Contact2Email") == string.Empty)
+            {
+                App.gContact2Email = "";
+            }
+            else
+            {
+                App.gContact2Email = IS.GetSettingStringValue("Contact2Email");
+            }
+
+            if (IS.GetSettingStringValue("Contact2Phone") == string.Empty)
+            {
+                App.gContact2Phone = "";
+            }
+            else
+            {
+                App.gContact2Phone = IS.GetSettingStringValue("Contact2Phone");
+            }
+
+            if (IS.GetSettingStringValue("Contact1Enabled") == string.Empty)
+            {
+                App.gContact1Enabled = "NO";
+            }
+            else
+            {
+                App.gContact1Enabled = IS.GetSettingStringValue("Contact1Enabled");
+            }
+
+            if (IS.GetSettingStringValue("Contact2Enabled") == string.Empty)
+            {
+                App.gContact2Enabled = "NO";
+            }
+            else
+            {
+                App.gContact2Enabled = IS.GetSettingStringValue("Contact2Enabled");
+            }
+        }
+
+        #endregion "Methods"
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated

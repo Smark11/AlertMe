@@ -115,29 +115,20 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contact 1.
+        ///   Looks up a localized string similar to Contact 1 Name.
         /// </summary>
-        public static string Contact1 {
+        public static string Contact1Name {
             get {
-                return ResourceManager.GetString("Contact1", resourceCulture);
+                return ResourceManager.GetString("Contact1Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contact 2.
+        ///   Looks up a localized string similar to Contact 2 Name.
         /// </summary>
-        public static string Contact2 {
+        public static string Contact2Name {
             get {
-                return ResourceManager.GetString("Contact2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Contact 3.
-        /// </summary>
-        public static string Contact3 {
-            get {
-                return ResourceManager.GetString("Contact3", resourceCulture);
+                return ResourceManager.GetString("Contact2Name", resourceCulture);
             }
         }
         

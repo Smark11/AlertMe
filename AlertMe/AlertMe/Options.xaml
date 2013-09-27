@@ -13,19 +13,23 @@
     mc:Ignorable="d"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:toolkitcode4fun="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls"      
-    shell:SystemTray.IsVisible="True">
-
+    shell:SystemTray.IsVisible="True"
+    BackKeyPress="BackButtonClicked">
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+          
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="400"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -33,12 +37,13 @@
             <ColumnDefinition Width="45*"></ColumnDefinition>
             <ColumnDefinition Width="40*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
-        <!--TitlePanel contains the name of the application and page title-->
+        
+       
+            <!--TitlePanel contains the name of the application and page title-->
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
                    Text="{Binding Path=LocalizedResources.Options, Source={StaticResource LocalizedStrings}}"
                    HorizontalAlignment="Center"
-                   FontSize="40" 
+                   FontSize="30" 
                    Margin="0,0,0,20" />
 
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
@@ -46,40 +51,39 @@
                    Text="{Binding Path=LocalizedResources.Name, Source={StaticResource LocalizedStrings}}"                      
                   FontSize="25"
                    Margin="10,0,0,0" />
-        <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+        <TextBox x:Name="txtYourName" Grid.Row="1" Grid.Column="2" Margin="0,0,10,0"></TextBox>
 
         <CheckBox x:Name="chkContact1" Grid.Row="2" Content="" Margin="0,-5,0,0" Checked="chkContact1_Checked" Unchecked="chkContact1_Unchecked" />
         <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1"
                    VerticalAlignment="Center"
-                   Text="{Binding Path=LocalizedResources.Contact1, Source={StaticResource LocalizedStrings}}"                      
+                   Text="{Binding Path=LocalizedResources.Contact1Name, Source={StaticResource LocalizedStrings}}"                      
                   FontSize="25"
                    Margin="0,0,0,0" />
-        <TextBox x:Name="txtContact1" Grid.Row="2" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+        <TextBox x:Name="txtContact1Name" Grid.Row="2" Grid.Column="3" Margin="0,0,10,0"></TextBox>
 
-        <CheckBox x:Name="chkContact2" Grid.Row="3" Content="" Margin="0,-5,0,0" Checked="chkContact2_Checked" Unchecked="chkContact2_Unchecked" />
-        <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1"
-                   VerticalAlignment="Center"
-                   Text="{Binding Path=LocalizedResources.Contact2, Source={StaticResource LocalizedStrings}}"                      
-                  FontSize="25"
-                   Margin="0,0,0,0" />
-        <TextBox x:Name="txtContact2" Grid.Row="3" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+        <TextBox x:Name="txtContact1Email" Grid.Row="3" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+        <TextBox x:Name="txtContact1Phone" Grid.Row="4" Grid.Column="2" Margin="0,0,10,0"></TextBox>
 
-        <CheckBox x:Name="chkContact3" Grid.Row="4" Content="" Margin="0,-5,0,0" Checked="chkContact3_Checked" Unchecked="chkContact3_Unchecked" />
-        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1"
-                   VerticalAlignment="Center"
-                   Text="{Binding Path=LocalizedResources.Contact3, Source={StaticResource LocalizedStrings}}"                      
-                  FontSize="25"
-                   Margin="0,0,0,0" />
-        <TextBox x:Name="txtContact3" Grid.Row="4" Grid.Column="2" Margin="0,0,10,0"></TextBox>
-
+        <CheckBox x:Name="chkContact2" Grid.Row="5" Content="" Margin="0,-5,0,0" Checked="chkContact2_Checked" Unchecked="chkContact2_Unchecked" />
         <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Contact2Name, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
+        <TextBox x:Name="txtContact2Name" Grid.Row="5" Grid.Column="3" Margin="0,0,10,0"></TextBox>
+
+
+        <TextBox x:Name="txtContact2Email" Grid.Row="6" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+        <TextBox x:Name="txtContact2Phone" Grid.Row="7" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+    
+        <TextBlock Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="1"
                    VerticalAlignment="Center"
                    Text="{Binding Path=LocalizedResources.PlayAlarm, Source={StaticResource LocalizedStrings}}"                      
                   FontSize="25"
                    Margin="0,0,0,0" />
         <toolkit:ToggleSwitch 
                    x:Name="togglePlayAlarm"  
-                   Grid.Row="5" 
+                   Grid.Row="8" 
                    Grid.Column="2"
                    Grid.ColumnSpan="2"
                    Margin="0,-5,0,0"
@@ -88,17 +92,18 @@
                    Unchecked="togglePlayAlarm_Unchecked">
         </toolkit:ToggleSwitch>
 
-        <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="1"
+        <TextBlock Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="1"
                    VerticalAlignment="Center"
                   Text="{Binding Path=LocalizedResources.CountdownTime, Source={StaticResource LocalizedStrings}}"                      
                    FontSize="25"
                    Margin="0,0,0,0" />
-        <toolkitcode4fun:TimeSpanPicker x:Name="ctlDefaultCountdownTime"                                      
-                   Grid.Row="6" Grid.Column="2"
+        <toolkitcode4fun:TimeSpanPicker x:Name="ctlDefaultCountdownTime"  
+                     Max="0:0:10"                   
+                   Grid.Row="9" Grid.Column="2"
                    Margin="40,0,0,0" Width="150"
                    FontSize="20"
                    ValueChanged="ctlDefaultCountdownTime_ValueChanged"                                        
-                   />
+                   />        
     </Grid>
 
 </phone:PhoneApplicationPage>

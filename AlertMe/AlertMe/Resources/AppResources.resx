@@ -143,14 +143,11 @@
   <data name="AppMenuItemOptions" xml:space="preserve">
     <value>Options</value>
   </data>
-  <data name="Contact1" xml:space="preserve">
-    <value>Contact 1</value>
+  <data name="Contact1Name" xml:space="preserve">
+    <value>Contact 1 Name</value>
   </data>
-  <data name="Contact2" xml:space="preserve">
-    <value>Contact 2</value>
-  </data>
-  <data name="Contact3" xml:space="preserve">
-    <value>Contact 3</value>
+  <data name="Contact2Name" xml:space="preserve">
+    <value>Contact 2 Name</value>
   </data>
   <data name="CountdownTime" xml:space="preserve">
     <value>Countdown Time</value>

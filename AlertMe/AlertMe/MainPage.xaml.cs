@@ -24,13 +24,13 @@ namespace AlertMe
 
             BuildLocalizedApplicationBar();
 
-            if (IS.GetSettingStringValue("Alerts-DefaultCountdown") == string.Empty)
+            if (IS.GetSettingStringValue("DefaultCountdown") == string.Empty)
             {
-                App.gDefaultCountdown=  new TimeSpan(0, 0, 5);
+                App.gDefaultCountdown = new TimeSpan(0, 0, 5);
             }
             else
             {
-                App.gDefaultCountdown = TimeSpan.Parse(IS.GetSettingStringValue("Alerts-DefaultCountdown"));              
+                App.gDefaultCountdown = TimeSpan.Parse(IS.GetSettingStringValue("DefaultCountdown"));              
             }
 
             AlertButton = "/Assets/Button.jpg";
