@@ -1,0 +1,104 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="AlertMe.Options"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:toolkitcode4fun="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls"      
+    shell:SystemTray.IsVisible="True">
+
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"></ColumnDefinition>
+            <ColumnDefinition Width="45*"></ColumnDefinition>
+            <ColumnDefinition Width="40*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
+                   Text="{Binding Path=LocalizedResources.Options, Source={StaticResource LocalizedStrings}}"
+                   HorizontalAlignment="Center"
+                   FontSize="40" 
+                   Margin="0,0,0,20" />
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Name, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="10,0,0,0" />
+        <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+
+        <CheckBox x:Name="chkContact1" Grid.Row="2" Content="" Margin="0,-5,0,0" Checked="chkContact1_Checked" Unchecked="chkContact1_Unchecked" />
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Contact1, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
+        <TextBox x:Name="txtContact1" Grid.Row="2" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+
+        <CheckBox x:Name="chkContact2" Grid.Row="3" Content="" Margin="0,-5,0,0" Checked="chkContact2_Checked" Unchecked="chkContact2_Unchecked" />
+        <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Contact2, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
+        <TextBox x:Name="txtContact2" Grid.Row="3" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+
+        <CheckBox x:Name="chkContact3" Grid.Row="4" Content="" Margin="0,-5,0,0" Checked="chkContact3_Checked" Unchecked="chkContact3_Unchecked" />
+        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Contact3, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
+        <TextBox x:Name="txtContact3" Grid.Row="4" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+
+        <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.PlayAlarm, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
+        <toolkit:ToggleSwitch 
+                   x:Name="togglePlayAlarm"  
+                   Grid.Row="5" 
+                   Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Margin="0,-5,0,0"
+                   Height="105"
+                   Checked="togglePlayAlarm_Checked"  
+                   Unchecked="togglePlayAlarm_Unchecked">
+        </toolkit:ToggleSwitch>
+
+        <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                  Text="{Binding Path=LocalizedResources.CountdownTime, Source={StaticResource LocalizedStrings}}"                      
+                   FontSize="25"
+                   Margin="0,0,0,0" />
+        <toolkitcode4fun:TimeSpanPicker x:Name="ctlDefaultCountdownTime"                                      
+                   Grid.Row="6" Grid.Column="2"
+                   Margin="40,0,0,0" Width="150"
+                   FontSize="20"
+                   ValueChanged="ctlDefaultCountdownTime_ValueChanged"                                        
+                   />
+    </Grid>
+
+</phone:PhoneApplicationPage>
