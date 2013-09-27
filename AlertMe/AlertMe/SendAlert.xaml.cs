@@ -107,6 +107,17 @@ namespace AlertMe
             }
         }
 
+        private string _address;
+        public string Address
+        {
+            get { return _address; }
+            set
+            {
+                _address = value;
+                NotifyPropertyChanged("Address");
+            }
+        }
+
         #endregion "Properties"
 
         #region "Events"
@@ -139,7 +150,7 @@ namespace AlertMe
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
                 
                 smsComposeTask.To = "123-45-45";
-                smsComposeTask.Body = "My location is: " + Addresses.Count;
+                smsComposeTask.Body = "My location is: " + Address;
                 smsComposeTask.Show();
             }
             catch (Exception)
@@ -201,10 +212,11 @@ namespace AlertMe
 
                 if (!e.Cancelled)
                 {
-                    foreach (var adress in e.Result.Select(adrInfo => adrInfo.Information.Address))
+                    foreach (var address in e.Result.Select(adrInfo => adrInfo.Information.Address))
                     {
-                        Addresses.Add(string.Format("{0} {1} {2} {3} {4}", adress.Street, adress.HouseNumber, adress.PostalCode,
-                          adress.City, adress.Country).Trim());
+                        Addresses.Add(string.Format("{0} {1} {2} {3} {4}", address.Street, address.HouseNumber, address.PostalCode,
+                          address.City, address.Country).Trim());
+                        Address = address.HouseNumber + " " + address.Street + " " + address.City + " " + address.State + " " + address.PostalCode;
                     }
                 }
 
