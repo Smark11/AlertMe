@@ -25,11 +25,10 @@
             <RowDefinition Height="65"/>
             <RowDefinition Height="65"/>
             <RowDefinition Height="65"/>
-            <RowDefinition Height="65"/>
-          
+            <RowDefinition Height="65"/>      
             <RowDefinition Height="75"/>
             <RowDefinition Height="75"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="75"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -124,7 +123,15 @@
                    Margin="40,0,0,0" Width="150"
                    FontSize="20"
                    ValueChanged="ctlDefaultCountdownTime_ValueChanged"                                        
-                   />        
+                   />
+
+        <TextBlock Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.SentTextCount, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
+        <TextBox x:Name="txtSentTextCount" Grid.Row="10" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+
     </Grid>
 
 </phone:PhoneApplicationPage>

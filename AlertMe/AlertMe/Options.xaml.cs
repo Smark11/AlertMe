@@ -26,6 +26,8 @@ namespace AlertMe
             txtContact2Name.Text = App.gContact2Name;
             txtContact2Email.Text = App.gContact2Email;
             txtContact2Phone.Text = App.gContact2Phone;
+            txtSentTextCount.Text = App.gSentTextCount.ToString();
+            
 
             if (App.gContact1Enabled == "YES")
             {
@@ -123,7 +125,6 @@ namespace AlertMe
         }
    
         #endregion "Events"
-
 
     }
 }

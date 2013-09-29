@@ -14,6 +14,7 @@ using Microsoft.Phone.Maps.Services;
 using System.Device.Location;
 using System.Collections.ObjectModel;
 using Microsoft.Phone.Tasks;
+using Common.IsolatedStoreage;
 
 namespace AlertMe
 {
@@ -38,8 +39,8 @@ namespace AlertMe
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             dispatcherTimer.Start();
-        
-            this.DataContext = this;         
+
+            this.DataContext = this;
         }
 
         #region "Properties"
@@ -137,6 +138,11 @@ namespace AlertMe
         private void StopAlert_Click(object sender, RoutedEventArgs e)
         {
             dispatcherTimer.Stop();
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
+
+        private void BackButtonClicked(object sender, CancelEventArgs e)
+        {
         }
 
         #endregion "Events"
@@ -148,14 +154,30 @@ namespace AlertMe
             try
             {
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
-                
+
                 smsComposeTask.To = "123-45-45";
                 smsComposeTask.Body = "My location is: " + Address;
                 smsComposeTask.Show();
+
+                UpdateSentTextCount();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
             }
+        }
+
+        private void UpdateSentTextCount()
+        {
+            if (IS.GetSetting("SentTextCount") == null)
+            {
+                IS.SaveSetting("SentTextCount", 1);
+            }
+            else
+            {
+                IS.SaveSetting("SentTextCount", (int)IS.GetSetting("SentTextCount") + 1);                         
+            }
+
+            App.gSentTextCount = (int)IS.GetSetting("SentTextCount");  
         }
 
         private void SendEmail()
@@ -163,7 +185,7 @@ namespace AlertMe
             try
             {
                 EmailComposeTask emailCompuser = new EmailComposeTask();
-               
+
                 emailCompuser.Subject = "GPS Location";
                 emailCompuser.Body = "This is a test email";
                 emailCompuser.Show();

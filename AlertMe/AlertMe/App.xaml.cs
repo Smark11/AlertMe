@@ -30,7 +30,7 @@ namespace AlertMe
         public static string gContact1Enabled;
         public static string gContact2Enabled;
         public static string gPlayAlarm;
-        public static int gSendTextCount;
+        public static int gSentTextCount;
 
         /// <summary>
         /// Constructor for the Application object.
@@ -68,24 +68,24 @@ namespace AlertMe
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
 
-                GetCountdownDefaultTime();
-                GetContactInfo();
+                GetSettings();
             }
 
         }
 
         #region "Methods"
-        private void GetCountdownDefaultTime()
+
+        private void GetSettings()
         {
             string countdownAlarmValue = string.Empty;
 
             if (IS.GetSettingStringValue("DefaultCountdown") == string.Empty)
-            {              
+            {
                 App.gDefaultCountdown = new TimeSpan(0, 0, 5); ;
             }
             else
             {
-                countdownAlarmValue = IS.GetSettingStringValue("DefaultCountdown");               
+                countdownAlarmValue = IS.GetSettingStringValue("DefaultCountdown");
                 App.gDefaultCountdown = TimeSpan.Parse(countdownAlarmValue);
             }
 
@@ -97,10 +97,7 @@ namespace AlertMe
             {
                 App.gPlayAlarm = IS.GetSettingStringValue("PlayAlarm");
             }
-        }
 
-        private void GetContactInfo()
-        {
             if (IS.GetSettingStringValue("YourName") == string.Empty)
             {
                 App.gYourName = "";
@@ -180,6 +177,15 @@ namespace AlertMe
             else
             {
                 App.gContact2Enabled = IS.GetSettingStringValue("Contact2Enabled");
+            }
+
+            if (IS.GetSetting("SentTextCount") == null)
+            {
+                App.gSentTextCount = 0;
+            }
+            else
+            {
+                App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
             }
         }
 

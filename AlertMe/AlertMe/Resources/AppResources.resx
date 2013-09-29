@@ -167,4 +167,7 @@
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="SentTextCount" xml:space="preserve">
+    <value>Sent TextCount</value>
+  </data>
 </root>

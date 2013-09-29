@@ -203,5 +203,14 @@ namespace AlertMe.Resources {
                 return ResourceManager.GetString("ResourceLanguage", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sent TextCount.
+        /// </summary>
+        public static string SentTextCount {
+            get {
+                return ResourceManager.GetString("SentTextCount", resourceCulture);
+            }
+        }
     }
 }
