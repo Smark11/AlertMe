@@ -61,7 +61,18 @@
                    Margin="0,0,0,0" />
         <TextBox x:Name="txtContact1Name" Grid.Row="2" Grid.Column="3" Margin="0,0,10,0"></TextBox>
 
+        <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Email, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
         <TextBox x:Name="txtContact1Email" Grid.Row="3" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+
+        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Phone, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
         <TextBox x:Name="txtContact1Phone" Grid.Row="4" Grid.Column="2" Margin="0,0,10,0"></TextBox>
 
         <CheckBox x:Name="chkContact2" Grid.Row="5" Content="" Margin="0,-5,0,0" Checked="chkContact2_Checked" Unchecked="chkContact2_Unchecked" />
@@ -72,8 +83,18 @@
                    Margin="0,0,0,0" />
         <TextBox x:Name="txtContact2Name" Grid.Row="5" Grid.Column="3" Margin="0,0,10,0"></TextBox>
 
-
+        <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Email, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
         <TextBox x:Name="txtContact2Email" Grid.Row="6" Grid.Column="2" Margin="0,0,10,0"></TextBox>
+
+        <TextBlock Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding Path=LocalizedResources.Phone, Source={StaticResource LocalizedStrings}}"                      
+                  FontSize="25"
+                   Margin="0,0,0,0" />
         <TextBox x:Name="txtContact2Phone" Grid.Row="7" Grid.Column="2" Margin="0,0,10,0"></TextBox>
     
         <TextBlock Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="1"
