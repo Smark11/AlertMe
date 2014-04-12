@@ -30,7 +30,18 @@ namespace AlertMe
         public static string gContact1Enabled;
         public static string gContact2Enabled;
         public static string gPlayAlarm;
+        public static string gEnableCountdown;
         public static int gSentTextCount;
+
+
+        private static bool _isTrial;
+        public bool IsTrial
+        {
+            get
+            {
+                return _isTrial;
+            }
+        }
 
         /// <summary>
         /// Constructor for the Application object.
@@ -98,85 +109,13 @@ namespace AlertMe
                 App.gPlayAlarm = IS.GetSettingStringValue("PlayAlarm");
             }
 
-            if (IS.GetSettingStringValue("YourName") == string.Empty)
+            if (IS.GetSettingStringValue("EnableCountdown") == string.Empty)
             {
-                App.gYourName = "";
-            }
-            else
-            {              
-                App.gYourName = IS.GetSettingStringValue("YourName");              
-            }
-
-            if (IS.GetSettingStringValue("Contact1Name") == string.Empty)
-            {
-                App.gContact1Name = "";
+                App.gEnableCountdown = "NO";
             }
             else
             {
-                App.gContact1Name = IS.GetSettingStringValue("Contact1Name");
-            }
-
-            if (IS.GetSettingStringValue("Contact1Email") == string.Empty)
-            {
-                App.gContact1Email = "";
-            }
-            else
-            {
-                App.gContact1Email = IS.GetSettingStringValue("Contact1Email");
-            }
-
-            if (IS.GetSettingStringValue("Contact1Phone") == string.Empty)
-            {
-                App.gContact1Phone = "";
-            }
-            else
-            {
-                App.gContact1Phone = IS.GetSettingStringValue("Contact1Phone");
-            }
-
-            if (IS.GetSettingStringValue("Contact2Name") == string.Empty)
-            {
-                App.gContact2Name = "";
-            }
-            else
-            {
-                App.gContact2Name = IS.GetSettingStringValue("Contact2Name");
-            }
-
-            if (IS.GetSettingStringValue("Contact2Email") == string.Empty)
-            {
-                App.gContact2Email = "";
-            }
-            else
-            {
-                App.gContact2Email = IS.GetSettingStringValue("Contact2Email");
-            }
-
-            if (IS.GetSettingStringValue("Contact2Phone") == string.Empty)
-            {
-                App.gContact2Phone = "";
-            }
-            else
-            {
-                App.gContact2Phone = IS.GetSettingStringValue("Contact2Phone");
-            }
-
-            if (IS.GetSettingStringValue("Contact1Enabled") == string.Empty)
-            {
-                App.gContact1Enabled = "NO";
-            }
-            else
-            {
-                App.gContact1Enabled = IS.GetSettingStringValue("Contact1Enabled");
-            }
-
-            if (IS.GetSettingStringValue("Contact2Enabled") == string.Empty)
-            {
-                App.gContact2Enabled = "NO";
-            }
-            else
-            {
-                App.gContact2Enabled = IS.GetSettingStringValue("Contact2Enabled");
+                App.gEnableCountdown = IS.GetSettingStringValue("EnableCountdown");
             }
 
             if (IS.GetSetting("SentTextCount") == null)

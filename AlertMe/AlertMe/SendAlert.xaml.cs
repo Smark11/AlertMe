@@ -15,6 +15,10 @@ using System.Device.Location;
 using System.Collections.ObjectModel;
 using Microsoft.Phone.Tasks;
 using Common.IsolatedStoreage;
+using Microsoft.Phone.Maps.Controls;
+
+
+
 
 namespace AlertMe
 {
@@ -30,15 +34,24 @@ namespace AlertMe
             InitializeComponent();
             Addresses = new List<string>();
 
-            GetGPSLocation();
+            //GetGPSLocation();
+           // RequestDirections();
 
-            ClockValue = App.gDefaultCountdown;
+            if (App.gEnableCountdown.ToUpper() == "YES")
+            {
+                ClockValue = App.gDefaultCountdown;
+            }
+            else
+            {
+                ClockValue = new TimeSpan(0, 0, 1); ;
+            }
+       
             ClockValueString = ClockValue.ToString(@"\:s");
-
+                   
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            dispatcherTimer.Start();
+            dispatcherTimer.Start();          
 
             this.DataContext = this;
         }
@@ -195,10 +208,36 @@ namespace AlertMe
             }
         }
 
+        async void RequestDirections()
+        {
+            // Get the values required to specify the destination.
+            string latitude = "47.6451413797194";
+            string longitude = "-122.141964733601";
+            string name = "Redmond, WA";
+
+            // Assemble the Uri to launch.
+            Uri uri = new Uri("ms-drive-to:?destination.latitude=" + latitude +
+                "&destination.longitude=" + longitude + "&destination.name=" + name);
+            // The resulting Uri is: "ms-drive-to:?destination.latitude=47.6451413797194
+            //  &destination.longitude=-122.141964733601&destination.name=Redmond, WA")
+
+            // Launch the Uri.
+            var success = await Windows.System.Launcher.LaunchUriAsync(uri);
+
+            if (success)
+            {
+                // Uri launched.
+            }
+            else
+            {
+                // Uri failed to launch.
+            }
+        }
+
         private async void GetGPSLocation()
         {
             try
-            {
+            {          
                 myGeoLocator = new Geolocator();
                 myGeoLocator.DesiredAccuracy = PositionAccuracy.Default;
                 myGeoLocator.MovementThreshold = 50;

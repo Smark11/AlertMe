@@ -102,7 +102,14 @@ namespace AlertMe
 
         private void Alert_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/SendAlert.xaml", UriKind.Relative));
+            if (App.gSentTextCount > 5)
+            {
+                MessageBox.Show("You have exceeded the trail number of texts sent limit.  Please purchase application.");
+            }
+            else
+            {
+                NavigationService.Navigate(new Uri("/SendAlert.xaml", UriKind.Relative));
+            }
         }
 
         private void Options_Click(object sender, EventArgs e)
