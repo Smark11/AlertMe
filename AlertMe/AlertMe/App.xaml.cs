@@ -21,6 +21,7 @@ namespace AlertMe
 
        
         public static int gSentTextCount;
+        public static int gTextLimit = 5;
 
 
         private static bool _isTrial;
@@ -28,7 +29,8 @@ namespace AlertMe
         {
             get
             {
-                return _isTrial;
+                return true;
+                //return _isTrial;
             }
         }
 

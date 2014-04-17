@@ -31,15 +31,26 @@ namespace AlertMe
             Addresses = new List<string>();
             GetGPSLocation();
 
-            BuildLocalizedApplicationBar();    
+            BuildLocalizedApplicationBar();
 
             AlertButton = "/Assets/Button.jpg";
+
+            if ((Application.Current as App).IsTrial)
+            {
+                TextStatusMessage = "Trail Text Sent: " + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
+                TextStatusMessageVisibility = Visibility.Visible;
+            }
+            else
+            {
+                TextStatusMessage = string.Empty;
+                TextStatusMessageVisibility = Visibility.Collapsed;
+            };
 
 
             this.DataContext = this;
         }
 
-     
+
 
         #region "Properties"
 
@@ -48,6 +59,28 @@ namespace AlertMe
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        private string _textStatusMessage;
+        public string TextStatusMessage
+        {
+            get { return _textStatusMessage; }
+            set
+            {
+                _textStatusMessage = value;
+                NotifyPropertyChanged("TextStatusMessage");
+            }
+        }
+
+        private Visibility _textStatusMessageVisibility;
+        public Visibility TextStatusMessageVisibility
+        {
+            get { return _textStatusMessageVisibility; }
+            set
+            {
+                _textStatusMessageVisibility = value;
+                NotifyPropertyChanged("TextStatusMessageVisibility");
             }
         }
 
@@ -159,16 +192,13 @@ namespace AlertMe
             }
         }
 
-
         private void SendTextAlert()
         {
             try
             {
-
-
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
 
-                smsComposeTask.To = "123-45-45";
+                smsComposeTask.To = "";
                 smsComposeTask.Body = "My location is: " + Address;
                 smsComposeTask.Show();
 
@@ -176,7 +206,7 @@ namespace AlertMe
             }
             catch (Exception ex)
             {
-                MessageBox.Show("SendTextAlert -> " + ex.Message);
+                MessageBox.Show("Text not sent.  Error = " + ex.Message);
             }
         }
 
@@ -220,9 +250,9 @@ namespace AlertMe
             //appBarButton2.Click += new EventHandler(DeleteLaps_Click);
 
             // Create a new menu item with the localized string from AppResources.
-            ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppMenuItemOptions);
-            ApplicationBar.MenuItems.Add(appBarMenuItem);
-            appBarMenuItem.Click += new EventHandler(Options_Click);
+            //ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppMenuItemOptions);
+            //ApplicationBar.MenuItems.Add(appBarMenuItem);
+            //appBarMenuItem.Click += new EventHandler(Options_Click);
 
             ApplicationBarMenuItem appBarMenuItem2 = new ApplicationBarMenuItem(AppResources.AppMenuItemAbout);
             ApplicationBar.MenuItems.Add(appBarMenuItem2);
@@ -239,14 +269,14 @@ namespace AlertMe
 
         private void Alert_Click(object sender, RoutedEventArgs e)
         {
-            if (App.gSentTextCount > 5)
+            if ((App.gSentTextCount > App.gTextLimit) && ((Application.Current as App).IsTrial))
             {
-                MessageBox.Show("You have exceeded the trail number of texts sent limit.  Please purchase application.");
+                MessageBox.Show("You have exceeded the trail number of texts sent limit (" + App.gTextLimit + ").  Please purchase application.");
             }
             else
             {
-                SendTextAlert();             
-            }         
+                SendTextAlert();
+            }
         }
 
         private void Options_Click(object sender, EventArgs e)
