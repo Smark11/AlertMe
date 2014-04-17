@@ -16,6 +16,7 @@ using System.Collections.ObjectModel;
 using Microsoft.Phone.Tasks;
 using Common.IsolatedStoreage;
 using Microsoft.Phone.Maps.Controls;
+using System.Threading;
 
 
 
@@ -27,33 +28,47 @@ namespace AlertMe
         DispatcherTimer dispatcherTimer;
         public event PropertyChangedEventHandler PropertyChanged;
         Geolocator myGeoLocator;
-
+        int debug;
 
         public SendAlert()
         {
-            InitializeComponent();
-            Addresses = new List<string>();
-
-            //GetGPSLocation();
-           // RequestDirections();
-
-            if (App.gEnableCountdown.ToUpper() == "YES")
+            try
             {
-                ClockValue = App.gDefaultCountdown;
-            }
-            else
-            {
-                ClockValue = new TimeSpan(0, 0, 1); ;
-            }
-       
-            ClockValueString = ClockValue.ToString(@"\:s");
-                   
-            dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            dispatcherTimer.Start();          
+                debug = 0;
+                InitializeComponent();
+                Addresses = new List<string>();
+                debug = 1;
+                GetGPSLocation();
 
-            this.DataContext = this;
+                //Sleep to give GPS time to get address
+                Thread.Sleep(2000);
+                debug = 3;
+                // RequestDirections();
+
+                if (App.gEnableCountdown.ToUpper() == "YES")
+                {
+                    debug = 31;
+                    ClockValue = App.gDefaultCountdown;
+                }
+                else
+                {
+                    debug = 32;
+                    ClockValue = new TimeSpan(0, 0, 1); ;
+                }
+                debug = 4;
+                ClockValueString = ClockValue.ToString(@"\:s");
+
+                dispatcherTimer = new DispatcherTimer();
+                dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+                dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+                dispatcherTimer.Start();
+                debug = 5;
+                this.DataContext = this;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Send Alert Constructor -> Debug = " + debug + " msg=" + ex.Message);
+            }
         }
 
         #region "Properties"
@@ -166,6 +181,8 @@ namespace AlertMe
         {
             try
             {
+               
+
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
 
                 smsComposeTask.To = "123-45-45";
@@ -176,6 +193,7 @@ namespace AlertMe
             }
             catch (Exception ex)
             {
+                MessageBox.Show("SendTextAlert -> " + ex.Message);
             }
         }
 

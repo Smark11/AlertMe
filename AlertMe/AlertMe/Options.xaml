@@ -36,8 +36,7 @@
             <ColumnDefinition Width="45*"></ColumnDefinition>
             <ColumnDefinition Width="40*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
-       
+               
             <!--TitlePanel contains the name of the application and page title-->
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
                    Text="{Binding Path=LocalizedResources.Options, Source={StaticResource LocalizedStrings}}"
@@ -45,8 +44,20 @@
                    FontSize="30" 
                    Margin="0,0,0,20" />
 
-       
-        <TextBlock Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1"
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Content="Get Contacts" Click="Button_Click">
+        </Button>
+        
+        <ListBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                     Height="300" Width="Auto"
+                     x:Name="ContactResultsData" ItemsSource="{Binding}"  Margin="0,0,0,0" Grid.RowSpan="7" VerticalAlignment="Top" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>              
+                        <CheckBox Checked="chkBoxChecked" Unchecked="chkBoxUnchecked"  Name="ContactResults" Content="{Binding Path=DisplayName, Mode=OneWay}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>  
+            
+            <TextBlock Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1"
                    VerticalAlignment="Center"
                    Text="{Binding Path=LocalizedResources.EnableCountdown, Source={StaticResource LocalizedStrings}}"                      
                   FontSize="25"
