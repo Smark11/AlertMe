@@ -50,8 +50,6 @@ namespace AlertMe
             this.DataContext = this;
         }
 
-
-
         #region "Properties"
 
         private void NotifyPropertyChanged(String propertyName)
@@ -135,6 +133,16 @@ namespace AlertMe
             }
         }
 
+        private string _mapURL;
+        public string MapURL
+        {
+            get { return _mapURL; }
+            set
+            {
+                _mapURL = value;
+                NotifyPropertyChanged("MapURL");
+            }
+        }
         #endregion "Properties"
 
         #region "Methods"
@@ -151,6 +159,8 @@ namespace AlertMe
 
                 Latitude = geoposition.Coordinate.Latitude;
                 Longitude = geoposition.Coordinate.Longitude;
+
+                MapURL = "https://www.google.com/maps/place/@" + Latitude + "," + Longitude;
 
                 var reverseGeocode = new ReverseGeocodeQuery();
                 reverseGeocode.GeoCoordinate = new GeoCoordinate(geoposition.Coordinate.Latitude, Longitude);
@@ -199,7 +209,7 @@ namespace AlertMe
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
 
                 smsComposeTask.To = "";
-                smsComposeTask.Body = "My location is: " + Address;
+                smsComposeTask.Body = "My location is: " + Address + ". Map URL:" + MapURL;
                 smsComposeTask.Show();
 
                 UpdateSentTextCount();
@@ -304,12 +314,7 @@ namespace AlertMe
             marketplaceSearchTask.Show();
         }
 
-
         #endregion "Events"
-
-
-
-
 
     }
 }
