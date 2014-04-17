@@ -19,18 +19,7 @@ namespace AlertMe
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
-        public static TimeSpan gDefaultCountdown;
-        public static string gYourName;
-        public static string gContact1Name;
-        public static string gContact1Email;
-        public static string gContact1Phone;
-        public static string gContact2Name;
-        public static string gContact2Email;
-        public static string gContact2Phone;
-        public static string gContact1Enabled;
-        public static string gContact2Enabled;
-        public static string gPlayAlarm;
-        public static string gEnableCountdown;
+       
         public static int gSentTextCount;
 
 
@@ -88,36 +77,7 @@ namespace AlertMe
 
         private void GetSettings()
         {
-            string countdownAlarmValue = string.Empty;
-
-            if (IS.GetSettingStringValue("DefaultCountdown") == string.Empty)
-            {
-                App.gDefaultCountdown = new TimeSpan(0, 0, 5); ;
-            }
-            else
-            {
-                countdownAlarmValue = IS.GetSettingStringValue("DefaultCountdown");
-                App.gDefaultCountdown = TimeSpan.Parse(countdownAlarmValue);
-            }
-
-            if (IS.GetSettingStringValue("PlayAlarm") == string.Empty)
-            {
-                App.gPlayAlarm = "NO";
-            }
-            else
-            {
-                App.gPlayAlarm = IS.GetSettingStringValue("PlayAlarm");
-            }
-
-            if (IS.GetSettingStringValue("EnableCountdown") == string.Empty)
-            {
-                App.gEnableCountdown = "NO";
-            }
-            else
-            {
-                App.gEnableCountdown = IS.GetSettingStringValue("EnableCountdown");
-            }
-
+        
             if (IS.GetSetting("SentTextCount") == null)
             {
                 App.gSentTextCount = 0;

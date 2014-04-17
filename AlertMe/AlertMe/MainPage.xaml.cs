@@ -11,6 +11,9 @@ using AlertMe.Resources;
 using Microsoft.Phone.Tasks;
 using Common.IsolatedStoreage;
 using System.ComponentModel;
+using Windows.Devices.Geolocation;
+using Microsoft.Phone.Maps.Services;
+using System.Device.Location;
 
 namespace AlertMe
 {
@@ -19,21 +22,16 @@ namespace AlertMe
         PhoneNumberChooserTask phoneNumberChooserTask;
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        Geolocator myGeoLocator;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+            Addresses = new List<string>();
+            GetGPSLocation();
 
-            BuildLocalizedApplicationBar();
-
-            if (IS.GetSettingStringValue("DefaultCountdown") == string.Empty)
-            {
-                App.gDefaultCountdown = new TimeSpan(0, 0, 5);
-            }
-            else
-            {
-                App.gDefaultCountdown = TimeSpan.Parse(IS.GetSettingStringValue("DefaultCountdown"));              
-            }
+            BuildLocalizedApplicationBar();    
 
             AlertButton = "/Assets/Button.jpg";
 
@@ -59,9 +57,142 @@ namespace AlertMe
             get { return _alertButton; }
             set { _alertButton = value; NotifyPropertyChanged("_alertButton"); }
         }
+
+        private Double _latitude;
+        public Double Latitude
+        {
+            get { return _latitude; }
+            set
+            {
+                _latitude = value;
+                NotifyPropertyChanged("Latitude");
+            }
+        }
+
+        private Double _longitude;
+        public Double Longitude
+        {
+            get { return _longitude; }
+            set
+            {
+                _longitude = value;
+                NotifyPropertyChanged("Longitude");
+            }
+        }
+
+        private List<string> _addresses;
+        public List<string> Addresses
+        {
+            get { return _addresses; }
+            set
+            {
+                _addresses = value;
+                NotifyPropertyChanged("Addresses");
+            }
+        }
+
+        private string _address;
+        public string Address
+        {
+            get { return _address; }
+            set
+            {
+                _address = value;
+                NotifyPropertyChanged("Address");
+            }
+        }
+
         #endregion "Properties"
 
         #region "Methods"
+
+        private async void GetGPSLocation()
+        {
+            try
+            {
+                myGeoLocator = new Geolocator();
+                myGeoLocator.DesiredAccuracy = PositionAccuracy.Default;
+                myGeoLocator.MovementThreshold = 50;
+
+                Geoposition geoposition = await myGeoLocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
+
+                Latitude = geoposition.Coordinate.Latitude;
+                Longitude = geoposition.Coordinate.Longitude;
+
+                var reverseGeocode = new ReverseGeocodeQuery();
+                reverseGeocode.GeoCoordinate = new GeoCoordinate(geoposition.Coordinate.Latitude, Longitude);
+                reverseGeocode.QueryCompleted += ReverseGeocodeQueryCompleted;
+                reverseGeocode.QueryAsync();
+            }
+
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void ReverseGeocodeQueryCompleted(object sender, QueryCompletedEventArgs<System.Collections.Generic.IList<MapLocation>> e)
+        {
+            var reverseGeocode = sender as ReverseGeocodeQuery;
+
+            try
+            {
+                if (reverseGeocode != null)
+                {
+                    reverseGeocode.QueryCompleted -= ReverseGeocodeQueryCompleted;
+                }
+
+                Addresses.Clear();
+
+                if (!e.Cancelled)
+                {
+                    foreach (var address in e.Result.Select(adrInfo => adrInfo.Information.Address))
+                    {
+                        Addresses.Add(string.Format("{0} {1} {2} {3} {4}", address.Street, address.HouseNumber, address.PostalCode,
+                          address.City, address.Country).Trim());
+                        Address = address.HouseNumber + " " + address.Street + " " + address.City + " " + address.State + " " + address.PostalCode;
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+
+        private void SendTextAlert()
+        {
+            try
+            {
+
+
+                SmsComposeTask smsComposeTask = new SmsComposeTask();
+
+                smsComposeTask.To = "123-45-45";
+                smsComposeTask.Body = "My location is: " + Address;
+                smsComposeTask.Show();
+
+                UpdateSentTextCount();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("SendTextAlert -> " + ex.Message);
+            }
+        }
+
+        private void UpdateSentTextCount()
+        {
+            if (IS.GetSetting("SentTextCount") == null)
+            {
+                IS.SaveSetting("SentTextCount", 1);
+            }
+            else
+            {
+                IS.SaveSetting("SentTextCount", (int)IS.GetSetting("SentTextCount") + 1);
+            }
+
+            App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
+        }
 
         #endregion "Methods"
 
@@ -114,9 +245,8 @@ namespace AlertMe
             }
             else
             {
-                NavigationService.Navigate(new Uri("/SendAlert.xaml", UriKind.Relative));
-            }
-            
+                SendTextAlert();             
+            }         
         }
 
         private void Options_Click(object sender, EventArgs e)

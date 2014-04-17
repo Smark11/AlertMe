@@ -49,6 +49,7 @@
         
         <ListBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
                      Height="300" Width="Auto"
+                
                      x:Name="ContactResultsData" ItemsSource="{Binding}"  Margin="0,0,0,0" Grid.RowSpan="7" VerticalAlignment="Top" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>              
@@ -56,53 +57,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>  
-            
-            <TextBlock Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1"
-                   VerticalAlignment="Center"
-                   Text="{Binding Path=LocalizedResources.EnableCountdown, Source={StaticResource LocalizedStrings}}"                      
-                  FontSize="25"
-                   Margin="0,0,0,0" />
-      
-        <toolkit:ToggleSwitch 
-                   x:Name="toggleEnableCountdown"  
-                   Grid.Row="7" 
-                   Grid.Column="2"
-                   Grid.ColumnSpan="2"
-                   Margin="0,-5,0,0"
-                   Height="105"
-                   Checked="toggleEnableCountdown_Checked"  
-                   Unchecked="toggleEnableCountdown_Unchecked">
-        </toolkit:ToggleSwitch>
-
-        <TextBlock Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="1"
-                   VerticalAlignment="Center"
-                   Text="{Binding Path=LocalizedResources.PlayAlarm, Source={StaticResource LocalizedStrings}}"                      
-                  FontSize="25"
-                   Margin="0,0,0,0" />
-        <toolkit:ToggleSwitch 
-                   x:Name="togglePlayAlarm"  
-                   Grid.Row="8" 
-                   Grid.Column="2"
-                   Grid.ColumnSpan="2"
-                   Margin="0,-5,0,0"
-                   Height="105"
-                   Checked="togglePlayAlarm_Checked"  
-                   Unchecked="togglePlayAlarm_Unchecked">
-        </toolkit:ToggleSwitch>
-
-        <TextBlock Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="1"
-                   VerticalAlignment="Center"
-                  Text="{Binding Path=LocalizedResources.CountdownTime, Source={StaticResource LocalizedStrings}}"                      
-                   FontSize="25"
-                   Margin="0,0,0,0" />
-        <toolkitcode4fun:TimeSpanPicker x:Name="ctlDefaultCountdownTime"  
-                     Max="0:0:10"                   
-                   Grid.Row="9" Grid.Column="2"
-                   Margin="40,0,0,0" Width="150"
-                   FontSize="20"
-                   ValueChanged="ctlDefaultCountdownTime_ValueChanged"                                        
-                   />
-
+                                                                         
         <TextBlock Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="1"
                    VerticalAlignment="Center"
                    Text="{Binding Path=LocalizedResources.SentTextCount, Source={StaticResource LocalizedStrings}}"                      

@@ -107,9 +107,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SendAlert.xaml.cs">
-      <DependentUpon>SendAlert.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -163,9 +160,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Options.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SendAlert.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
