@@ -16,6 +16,8 @@ namespace AlertMe
 {
     public partial class MainPage : INotifyPropertyChanged
     {
+        PhoneNumberChooserTask phoneNumberChooserTask;
+
         public event PropertyChangedEventHandler PropertyChanged;
         // Constructor
         public MainPage()
@@ -34,7 +36,28 @@ namespace AlertMe
             }
 
             AlertButton = "/Assets/Button.jpg";
+
+
+            
+            phoneNumberChooserTask = new PhoneNumberChooserTask();
+            phoneNumberChooserTask.Completed += new EventHandler<PhoneNumberResult>(phoneNumberChooserTask_Completed);
+            phoneNumberChooserTask.Show();
+
             this.DataContext = this;
+        }
+
+        void phoneNumberChooserTask_Completed(object sender, PhoneNumberResult e)
+        {
+            if (e.TaskResult == TaskResult.OK)
+            {
+                MessageBox.Show("The phone number for " + e.DisplayName + " is " + e.PhoneNumber);
+
+                //Code to start a new call using the retrieved phone number.
+                //PhoneCallTask phoneCallTask = new PhoneCallTask();
+                //phoneCallTask.DisplayName = e.DisplayName;
+                //phoneCallTask.PhoneNumber = e.PhoneNumber;
+                //phoneCallTask.Show();
+            }
         }
 
         #region "Properties"
