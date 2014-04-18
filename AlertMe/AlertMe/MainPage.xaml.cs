@@ -26,9 +26,10 @@ namespace AlertMe
         Geolocator myGeoLocator;
         // Constructor
         public MainPage()
-        {
+        {          
             InitializeComponent();
             Addresses = new List<string>();
+           // GetSettings();
             GetGPSLocation();
 
             BuildLocalizedApplicationBar();
@@ -45,8 +46,7 @@ namespace AlertMe
                 TextStatusMessage = string.Empty;
                 TextStatusMessageVisibility = Visibility.Collapsed;
             };
-
-
+         
             this.DataContext = this;
         }
 
@@ -206,21 +206,20 @@ namespace AlertMe
         {
             try
             {
+                UpdateSentTextCount(1);
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
-
                 smsComposeTask.To = "";
-                smsComposeTask.Body = "My location is: " + Address + ". Map URL:" + MapURL;
-                smsComposeTask.Show();
-
-                UpdateSentTextCount();
+                smsComposeTask.Body = "My location is: " + Address;
+                smsComposeTask.Show();                                     
             }
             catch (Exception ex)
             {
+                UpdateSentTextCount(-1);
                 MessageBox.Show("Text not sent.  Error = " + ex.Message);
             }
         }
 
-        private void UpdateSentTextCount()
+        private void UpdateSentTextCount(int value)
         {
             if (IS.GetSetting("SentTextCount") == null)
             {
@@ -228,10 +227,11 @@ namespace AlertMe
             }
             else
             {
-                IS.SaveSetting("SentTextCount", (int)IS.GetSetting("SentTextCount") + 1);
+                IS.SaveSetting("SentTextCount", (int)IS.GetSetting("SentTextCount") + value);
             }
 
             App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
+            TextStatusMessage = "Trail Text Sent: " + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
         }
 
         #endregion "Methods"

@@ -77,16 +77,18 @@ namespace AlertMe
 
         #region "Methods"
 
-        private void GetSettings()
+        public void GetSettings()
         {
-        
+          
             if (IS.GetSetting("SentTextCount") == null)
             {
                 App.gSentTextCount = 0;
+             
             }
             else
             {
                 App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
+                
             }
         }
 
