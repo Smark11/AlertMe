@@ -170,7 +170,4 @@
   <data name="SentTextCount" xml:space="preserve">
     <value>Sent TextCount</value>
   </data>
-  <data name="EnableCountdown" xml:space="preserve">
-    <value>Enable Countdown</value>
-  </data>
 </root>

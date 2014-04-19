@@ -16,9 +16,9 @@
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
 
         <Border Grid.Row="1" 
@@ -27,7 +27,7 @@
                 VerticalAlignment="Center"
                 BorderBrush="Green"
                 Background="Green"
-                BorderThickness="1"
+                BorderThickness="3"
                 CornerRadius="60"
                 Padding="2">
             <Button x:Name="AlertMe" 
@@ -35,21 +35,12 @@
                     Grid.Column="1" 
                     Width="300" 
                     Height="200"
-                    Content="Alert"
-                    FontSize="110"
-                    BorderThickness="0"
+                    Content="Alert Me"
+                    FontSize="60"
                     VerticalAlignment="Top" 
                     Click="Alert_Click">
             </Button>
         </Border>
-
-        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center"
-                   Text="{Binding TextStatusMessage}" 
-                   Visibility="{Binding TextStatusMessageVisibility}"
-                   FontSize="20"
-                   Margin="0,0,0,0" />
-
     </Grid>
 
 </phone:PhoneApplicationPage>

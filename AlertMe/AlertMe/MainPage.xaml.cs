@@ -11,42 +11,29 @@ using AlertMe.Resources;
 using Microsoft.Phone.Tasks;
 using Common.IsolatedStoreage;
 using System.ComponentModel;
-using Windows.Devices.Geolocation;
-using Microsoft.Phone.Maps.Services;
-using System.Device.Location;
 
 namespace AlertMe
 {
     public partial class MainPage : INotifyPropertyChanged
     {
-        PhoneNumberChooserTask phoneNumberChooserTask;
-
         public event PropertyChangedEventHandler PropertyChanged;
-
-        Geolocator myGeoLocator;
         // Constructor
         public MainPage()
-        {          
+        {
             InitializeComponent();
-            Addresses = new List<string>();
-           // GetSettings();
-            GetGPSLocation();
 
             BuildLocalizedApplicationBar();
 
-            AlertButton = "/Assets/Button.jpg";
-
-            if ((Application.Current as App).IsTrial)
+            if (IS.GetSettingStringValue("DefaultCountdown") == string.Empty)
             {
-                TextStatusMessage = "Trail Text Sent: " + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
-                TextStatusMessageVisibility = Visibility.Visible;
+                App.gDefaultCountdown = new TimeSpan(0, 0, 5);
             }
             else
             {
-                TextStatusMessage = string.Empty;
-                TextStatusMessageVisibility = Visibility.Collapsed;
-            };
-         
+                App.gDefaultCountdown = TimeSpan.Parse(IS.GetSettingStringValue("DefaultCountdown"));              
+            }
+
+            AlertButton = "/Assets/Button.jpg";
             this.DataContext = this;
         }
 
@@ -60,179 +47,15 @@ namespace AlertMe
             }
         }
 
-        private string _textStatusMessage;
-        public string TextStatusMessage
-        {
-            get { return _textStatusMessage; }
-            set
-            {
-                _textStatusMessage = value;
-                NotifyPropertyChanged("TextStatusMessage");
-            }
-        }
-
-        private Visibility _textStatusMessageVisibility;
-        public Visibility TextStatusMessageVisibility
-        {
-            get { return _textStatusMessageVisibility; }
-            set
-            {
-                _textStatusMessageVisibility = value;
-                NotifyPropertyChanged("TextStatusMessageVisibility");
-            }
-        }
-
         private string _alertButton;
         public string AlertButton
         {
             get { return _alertButton; }
             set { _alertButton = value; NotifyPropertyChanged("_alertButton"); }
         }
-
-        private Double _latitude;
-        public Double Latitude
-        {
-            get { return _latitude; }
-            set
-            {
-                _latitude = value;
-                NotifyPropertyChanged("Latitude");
-            }
-        }
-
-        private Double _longitude;
-        public Double Longitude
-        {
-            get { return _longitude; }
-            set
-            {
-                _longitude = value;
-                NotifyPropertyChanged("Longitude");
-            }
-        }
-
-        private List<string> _addresses;
-        public List<string> Addresses
-        {
-            get { return _addresses; }
-            set
-            {
-                _addresses = value;
-                NotifyPropertyChanged("Addresses");
-            }
-        }
-
-        private string _address;
-        public string Address
-        {
-            get { return _address; }
-            set
-            {
-                _address = value;
-                NotifyPropertyChanged("Address");
-            }
-        }
-
-        private string _mapURL;
-        public string MapURL
-        {
-            get { return _mapURL; }
-            set
-            {
-                _mapURL = value;
-                NotifyPropertyChanged("MapURL");
-            }
-        }
         #endregion "Properties"
 
         #region "Methods"
-
-        private async void GetGPSLocation()
-        {
-            try
-            {
-                myGeoLocator = new Geolocator();
-                myGeoLocator.DesiredAccuracy = PositionAccuracy.Default;
-                myGeoLocator.MovementThreshold = 50;
-
-                Geoposition geoposition = await myGeoLocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
-
-                Latitude = geoposition.Coordinate.Latitude;
-                Longitude = geoposition.Coordinate.Longitude;
-
-               // MapURL = "https://www.google.com/maps/place/@" + Latitude + "," + Longitude;
-
-                var reverseGeocode = new ReverseGeocodeQuery();
-                reverseGeocode.GeoCoordinate = new GeoCoordinate(geoposition.Coordinate.Latitude, Longitude);
-                reverseGeocode.QueryCompleted += ReverseGeocodeQueryCompleted;
-                reverseGeocode.QueryAsync();
-            }
-
-            catch (Exception ex)
-            {
-            }
-        }
-
-        private void ReverseGeocodeQueryCompleted(object sender, QueryCompletedEventArgs<System.Collections.Generic.IList<MapLocation>> e)
-        {
-            var reverseGeocode = sender as ReverseGeocodeQuery;
-
-            try
-            {
-                if (reverseGeocode != null)
-                {
-                    reverseGeocode.QueryCompleted -= ReverseGeocodeQueryCompleted;
-                }
-
-                Addresses.Clear();
-
-                if (!e.Cancelled)
-                {
-                    foreach (var address in e.Result.Select(adrInfo => adrInfo.Information.Address))
-                    {
-                        Addresses.Add(string.Format("{0} {1} {2} {3} {4}", address.Street, address.HouseNumber, address.PostalCode,
-                          address.City, address.Country).Trim());
-                        Address = address.HouseNumber + " " + address.Street + " " + address.City + " " + address.State + " " + address.PostalCode;
-                    }
-                }
-
-            }
-            catch (Exception)
-            {
-            }
-        }
-
-        private void SendTextAlert()
-        {
-            try
-            {
-                UpdateSentTextCount(1);
-                SmsComposeTask smsComposeTask = new SmsComposeTask();
-                smsComposeTask.To = "";
-                smsComposeTask.Body = "My location is: " + Address;
-                smsComposeTask.Show();                                     
-            }
-            catch (Exception ex)
-            {
-                UpdateSentTextCount(-1);
-                MessageBox.Show("Text not sent.  Error = " + ex.Message);
-            }
-        }
-
-        private void UpdateSentTextCount(int value)
-        {
-            if (IS.GetSetting("SentTextCount") == null)
-            {
-                IS.SaveSetting("SentTextCount", 1);
-            }
-            else
-            {
-                IS.SaveSetting("SentTextCount", (int)IS.GetSetting("SentTextCount") + value);
-            }
-
-            App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
-            TextStatusMessage = "Trail Text Sent: " + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
-        }
 
         #endregion "Methods"
 
@@ -260,9 +83,9 @@ namespace AlertMe
             //appBarButton2.Click += new EventHandler(DeleteLaps_Click);
 
             // Create a new menu item with the localized string from AppResources.
-            //ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppMenuItemOptions);
-            //ApplicationBar.MenuItems.Add(appBarMenuItem);
-            //appBarMenuItem.Click += new EventHandler(Options_Click);
+            ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppMenuItemOptions);
+            ApplicationBar.MenuItems.Add(appBarMenuItem);
+            appBarMenuItem.Click += new EventHandler(Options_Click);
 
             ApplicationBarMenuItem appBarMenuItem2 = new ApplicationBarMenuItem(AppResources.AppMenuItemAbout);
             ApplicationBar.MenuItems.Add(appBarMenuItem2);
@@ -279,21 +102,7 @@ namespace AlertMe
 
         private void Alert_Click(object sender, RoutedEventArgs e)
         {
-            if ((App.gSentTextCount > App.gTextLimit) && ((Application.Current as App).IsTrial))
-            {
-                MessageBox.Show("You have exceeded the trail number of texts sent limit (" + App.gTextLimit + ").  Please purchase application.");
-            }
-            else
-            {
-                if (Address == string.Empty)
-                {
-                    MessageBox.Show("Could not determine address location. Please try again later.");
-                }
-                else
-                {
-                    SendTextAlert();
-                }
-            }
+            NavigationService.Navigate(new Uri("/SendAlert.xaml", UriKind.Relative));
         }
 
         private void Options_Click(object sender, EventArgs e)
@@ -321,7 +130,12 @@ namespace AlertMe
             marketplaceSearchTask.Show();
         }
 
+
         #endregion "Events"
+
+
+
+
 
     }
 }
