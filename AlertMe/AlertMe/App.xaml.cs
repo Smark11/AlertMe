@@ -8,6 +8,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using AlertMe.Resources;
 using Common.IsolatedStoreage;
+using Microsoft.Phone.Marketplace;
 
 namespace AlertMe
 {
@@ -22,15 +23,15 @@ namespace AlertMe
        
         public static int gSentTextCount;
         public static int gTextLimit = 5;
+        private static LicenseInformation _licenseInfo = new LicenseInformation();
 
 
         private static bool _isTrial;
         public bool IsTrial
         {
             get
-            {
-                return true;
-                //return _isTrial;
+            {        
+                return _isTrial;
             }
         }
 
@@ -92,18 +93,26 @@ namespace AlertMe
             }
         }
 
+        private void CheckLicence()
+        {
+            _isTrial = true;
+           // _isTrial = _licenseInfo.IsTrial();
+        }
+
         #endregion "Methods"
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            CheckLicence();
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            CheckLicence();
         }
 
         // Code to execute when the application is deactivated (sent to background)

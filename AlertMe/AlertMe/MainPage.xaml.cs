@@ -160,7 +160,7 @@ namespace AlertMe
                 Latitude = geoposition.Coordinate.Latitude;
                 Longitude = geoposition.Coordinate.Longitude;
 
-                MapURL = "https://www.google.com/maps/place/@" + Latitude + "," + Longitude;
+               // MapURL = "https://www.google.com/maps/place/@" + Latitude + "," + Longitude;
 
                 var reverseGeocode = new ReverseGeocodeQuery();
                 reverseGeocode.GeoCoordinate = new GeoCoordinate(geoposition.Coordinate.Latitude, Longitude);
@@ -285,7 +285,14 @@ namespace AlertMe
             }
             else
             {
-                SendTextAlert();
+                if (Address == string.Empty)
+                {
+                    MessageBox.Show("Could not determine address location. Please try again later.");
+                }
+                else
+                {
+                    SendTextAlert();
+                }
             }
         }
 
