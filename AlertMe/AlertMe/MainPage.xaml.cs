@@ -29,7 +29,6 @@ namespace AlertMe
         {          
             InitializeComponent();
             Addresses = new List<string>();
-           // GetSettings();
             GetGPSLocation();
 
             BuildLocalizedApplicationBar();
@@ -46,7 +45,7 @@ namespace AlertMe
                 TextStatusMessage = string.Empty;
                 TextStatusMessageVisibility = Visibility.Collapsed;
             };
-         
+  
             this.DataContext = this;
         }
 
@@ -122,7 +121,7 @@ namespace AlertMe
             }
         }
 
-        private string _address;
+        private string _address = string.Empty;
         public string Address
         {
             get { return _address; }
@@ -279,18 +278,18 @@ namespace AlertMe
 
         private void Alert_Click(object sender, RoutedEventArgs e)
         {
-            if ((App.gSentTextCount > App.gTextLimit) && ((Application.Current as App).IsTrial))
+            if ((App.gSentTextCount >= App.gTextLimit) && ((Application.Current as App).IsTrial))
             {
-                MessageBox.Show("You have exceeded the trail number of texts sent limit (" + App.gTextLimit + ").  Please purchase application.");
+                MessageBox.Show("Your trial number of texts allowed to be sent is " + App.gTextLimit + ".  Please purchase application for unlimitted texts.");
             }
             else
             {
-                if (Address == string.Empty)
+                if (Address == string.Empty || Address == null)
                 {
                     MessageBox.Show("Could not determine address location. Please try again later.");
                 }
                 else
-                {
+                {        
                     SendTextAlert();
                 }
             }
