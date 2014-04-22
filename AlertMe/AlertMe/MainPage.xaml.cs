@@ -36,7 +36,7 @@ namespace AlertMe
             GetSettings();             
             BuildLocalizedApplicationBar();
 
-            AlertButton = "/Assets/Button.jpg";
+           // AlertButton = "/Assets/Button.jpg";
 
             if ((Application.Current as App).IsTrial)
             {
@@ -49,11 +49,11 @@ namespace AlertMe
                 TextStatusMessageVisibility = Visibility.Collapsed;
             };
 
-            //If Address not found wait another 2 seconds to give it time
-            if (Address == string.Empty || Address == null)
-            {
-                Thread.Sleep(2000);
-            }
+            ////If Address not found wait another 2 seconds to give it time
+            //if (Address == string.Empty || Address == null)
+            //{
+            //    Thread.Sleep(2000);
+            //}
   
             this.DataContext = this;
         }
