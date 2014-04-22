@@ -61,6 +61,15 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not determine address location. Please try again later..
+        /// </summary>
+        public static string AddressNotFound {
+            get {
+                return ResourceManager.GetString("AddressNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to add.
         /// </summary>
         public static string AppBarButtonText {
@@ -160,6 +169,15 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My location is: .
+        /// </summary>
+        public static string MyLocationIs {
+            get {
+                return ResourceManager.GetString("MyLocationIs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your Name.
         /// </summary>
         public static string Name {
@@ -196,6 +214,15 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .  Please purchase application for unlimitted texts..
+        /// </summary>
+        public static string PleasePurchase {
+            get {
+                return ResourceManager.GetString("PleasePurchase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LeftToRight.
         /// </summary>
         public static string ResourceFlowDirection {
@@ -219,6 +246,33 @@ namespace AlertMe.Resources {
         public static string SentTextCount {
             get {
                 return ResourceManager.GetString("SentTextCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text not sent.  Error = .
+        /// </summary>
+        public static string TextNotSentError {
+            get {
+                return ResourceManager.GetString("TextNotSentError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your trial number of texts allowed to be sent is.
+        /// </summary>
+        public static string TrialMessage {
+            get {
+                return ResourceManager.GetString("TrialMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trial Text Sent: .
+        /// </summary>
+        public static string TrialTextSent {
+            get {
+                return ResourceManager.GetString("TrialTextSent", resourceCulture);
             }
         }
     }

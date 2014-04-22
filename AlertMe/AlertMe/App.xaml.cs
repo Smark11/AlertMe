@@ -71,27 +71,13 @@ namespace AlertMe
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
 
-                GetSettings();
             }
 
         }
 
         #region "Methods"
 
-        public void GetSettings()
-        {
-          
-            if (IS.GetSetting("SentTextCount") == null)
-            {
-                App.gSentTextCount = 0;
-             
-            }
-            else
-            {
-                App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
-                
-            }
-        }
+      
 
         private void CheckLicence()
         {

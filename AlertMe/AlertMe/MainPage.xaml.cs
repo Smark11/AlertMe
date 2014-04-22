@@ -14,6 +14,8 @@ using System.ComponentModel;
 using Windows.Devices.Geolocation;
 using Microsoft.Phone.Maps.Services;
 using System.Device.Location;
+using System.Threading;
+
 
 namespace AlertMe
 {
@@ -28,16 +30,17 @@ namespace AlertMe
         public MainPage()
         {          
             InitializeComponent();
+            
             Addresses = new List<string>();
             GetGPSLocation();
-
+            GetSettings();             
             BuildLocalizedApplicationBar();
 
             AlertButton = "/Assets/Button.jpg";
 
             if ((Application.Current as App).IsTrial)
             {
-                TextStatusMessage = "Trail Text Sent: " + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
+                TextStatusMessage =AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
                 TextStatusMessageVisibility = Visibility.Visible;
             }
             else
@@ -45,6 +48,12 @@ namespace AlertMe
                 TextStatusMessage = string.Empty;
                 TextStatusMessageVisibility = Visibility.Collapsed;
             };
+
+            //If Address not found wait another 2 seconds to give it time
+            if (Address == string.Empty || Address == null)
+            {
+                Thread.Sleep(2000);
+            }
   
             this.DataContext = this;
         }
@@ -208,13 +217,13 @@ namespace AlertMe
                 UpdateSentTextCount(1);
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
                 smsComposeTask.To = "";
-                smsComposeTask.Body = "My location is: " + Address;
+                smsComposeTask.Body = AppResources.MyLocationIs + Address;
                 smsComposeTask.Show();                                     
             }
             catch (Exception ex)
             {
                 UpdateSentTextCount(-1);
-                MessageBox.Show("Text not sent.  Error = " + ex.Message);
+                MessageBox.Show(AppResources.TextNotSentError + ex.Message);
             }
         }
 
@@ -230,7 +239,22 @@ namespace AlertMe
             }
 
             App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
-            TextStatusMessage = "Trail Text Sent: " + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
+            TextStatusMessage =AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
+        }
+
+        public void GetSettings()
+        {
+
+            if (IS.GetSetting("SentTextCount") == null)
+            {
+                App.gSentTextCount = 0;
+
+            }
+            else
+            {
+                App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
+
+            }
         }
 
         #endregion "Methods"
@@ -280,13 +304,13 @@ namespace AlertMe
         {
             if ((App.gSentTextCount >= App.gTextLimit) && ((Application.Current as App).IsTrial))
             {
-                MessageBox.Show("Your trial number of texts allowed to be sent is " + App.gTextLimit + ".  Please purchase application for unlimitted texts.");
+                MessageBox.Show(AppResources.TrialMessage + App.gTextLimit + AppResources.PleasePurchase);
             }
             else
             {
                 if (Address == string.Empty || Address == null)
                 {
-                    MessageBox.Show("Could not determine address location. Please try again later.");
+                    MessageBox.Show(AppResources.AddressNotFound);
                 }
                 else
                 {        
@@ -295,6 +319,7 @@ namespace AlertMe
             }
         }
 
+        //Not being used
         private void Options_Click(object sender, EventArgs e)
         {
 

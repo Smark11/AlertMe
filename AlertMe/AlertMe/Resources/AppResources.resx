@@ -173,4 +173,22 @@
   <data name="EnableCountdown" xml:space="preserve">
     <value>Enable Countdown</value>
   </data>
+  <data name="MyLocationIs" xml:space="preserve">
+    <value>My location is: </value>
+  </data>
+  <data name="TrialTextSent" xml:space="preserve">
+    <value>Trial Text Sent: </value>
+  </data>
+  <data name="AddressNotFound" xml:space="preserve">
+    <value>Could not determine address location. Please try again later.</value>
+  </data>
+  <data name="PleasePurchase" xml:space="preserve">
+    <value>.  Please purchase application for unlimitted texts.</value>
+  </data>
+  <data name="TextNotSentError" xml:space="preserve">
+    <value>Text not sent.  Error = </value>
+  </data>
+  <data name="TrialMessage" xml:space="preserve">
+    <value>Your trial number of texts allowed to be sent is</value>
+  </data>
 </root>
