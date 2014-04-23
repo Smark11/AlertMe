@@ -15,6 +15,7 @@ using Windows.Devices.Geolocation;
 using Microsoft.Phone.Maps.Services;
 using System.Device.Location;
 using System.Threading;
+using Common.Utilities;
 
 
 namespace AlertMe
@@ -22,6 +23,7 @@ namespace AlertMe
     public partial class MainPage : INotifyPropertyChanged
     {
         PhoneNumberChooserTask phoneNumberChooserTask;
+        private bool _rated;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -35,6 +37,18 @@ namespace AlertMe
             GetGPSLocation();
             GetSettings();             
             BuildLocalizedApplicationBar();
+
+            if (Rate.HasAppBeenRated().ToUpper() == "YES")
+            {
+                _rated = true;
+                App.gTextLimit = 10;
+            }
+            else
+            {
+                _rated = false;
+                App.gTextLimit = 5;
+            }
+
 
            // AlertButton = "/Assets/Button.jpg";
 
@@ -294,6 +308,14 @@ namespace AlertMe
             ApplicationBarMenuItem appBarMenuItem4 = new ApplicationBarMenuItem(AppResources.AppMenuItemMoreApps);
             ApplicationBar.MenuItems.Add(appBarMenuItem4);
             appBarMenuItem4.Click += new EventHandler(MoreApps_Click);
+
+            //Only add the "rate" button if the app has not been rated yet.
+            if (!_rated)
+            {
+                ApplicationBarMenuItem appBarMenuItem5 = new ApplicationBarMenuItem(AppResources.Rate);
+                ApplicationBar.MenuItems.Add(appBarMenuItem5);
+                appBarMenuItem5.Click += new EventHandler(Review_Click);
+            }
         }
 
         #endregion "Common Routines"
@@ -304,7 +326,14 @@ namespace AlertMe
         {
             if ((App.gSentTextCount >= App.gTextLimit) && ((Application.Current as App).IsTrial))
             {
-                MessageBox.Show(AppResources.TrialMessage + App.gTextLimit + AppResources.PleasePurchase);
+                if (_rated)
+                {
+                    MessageBox.Show(AppResources.TrialMessage + App.gTextLimit + AppResources.PleasePurchase);
+                }
+                else
+                {
+                    MessageBox.Show(AppResources.InitialTrial1 + App.gTextLimit + AppResources.InitialTrial2 + App.gTextLimit + AppResources.InitialTrial3);
+                }
             }
             else
             {
@@ -333,8 +362,14 @@ namespace AlertMe
 
         private void Review_Click(object sender, EventArgs e)
         {
+
             MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask();
             marketplaceReviewTask.Show();
+            IS.SaveSetting("AppRated", "Yes");
+            _rated = true;
+
+            App.gTextLimit = 10;
+            TextStatusMessage = AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;
         }
 
         private void MoreApps_Click(object sender, EventArgs e)

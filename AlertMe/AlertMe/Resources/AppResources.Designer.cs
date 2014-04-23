@@ -169,6 +169,33 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Trial number of sent text has expired (.
+        /// </summary>
+        public static string InitialTrial1 {
+            get {
+                return ResourceManager.GetString("InitialTrial1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ) To extend trial for another .
+        /// </summary>
+        public static string InitialTrial2 {
+            get {
+                return ResourceManager.GetString("InitialTrial2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  texts please rate app..
+        /// </summary>
+        public static string InitialTrial3 {
+            get {
+                return ResourceManager.GetString("InitialTrial3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My location is: .
         /// </summary>
         public static string MyLocationIs {
@@ -223,6 +250,15 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rate.
+        /// </summary>
+        public static string Rate {
+            get {
+                return ResourceManager.GetString("Rate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LeftToRight.
         /// </summary>
         public static string ResourceFlowDirection {
@@ -259,7 +295,7 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your trial number of texts allowed to be sent is.
+        ///   Looks up a localized string similar to Your trial number of texts allowed to be sent is .
         /// </summary>
         public static string TrialMessage {
             get {

@@ -189,6 +189,18 @@
     <value>Text not sent.  Error = </value>
   </data>
   <data name="TrialMessage" xml:space="preserve">
-    <value>Your trial number of texts allowed to be sent is</value>
+    <value>Your trial number of texts allowed to be sent is </value>
+  </data>
+  <data name="InitialTrial1" xml:space="preserve">
+    <value>Trial number of sent text has expired (</value>
+  </data>
+  <data name="InitialTrial2" xml:space="preserve">
+    <value>) To extend trial for another </value>
+  </data>
+  <data name="InitialTrial3" xml:space="preserve">
+    <value> texts please rate app.</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Rate</value>
   </data>
 </root>

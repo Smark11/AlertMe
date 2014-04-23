@@ -30,7 +30,7 @@
                 BorderThickness="1"
                 CornerRadius="60"
                 Padding="2">
-            <Button x:Name="AlertMe" 
+            <Button x:Name="AlertMe"                   
                     Grid.Row="1" 
                     Grid.Column="1" 
                     Width="300" 
@@ -42,6 +42,19 @@
                     Click="Alert_Click">
             </Button>
         </Border>
+
+        <!--<Button
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalAlignment="Top" HorizontalAlignment="Left" Click="Alert_Click" Background="Blue">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Image Source="/Assets/greenbutton.jpg" Width="16" Height="16" Margin="0,0,10,0"/>
+                <TextBlock>Press</TextBlock>
+            </StackPanel>
+        </Button>-->
+
+
+
 
         <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                    HorizontalAlignment="Center"
