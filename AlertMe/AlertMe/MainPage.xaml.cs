@@ -26,15 +26,31 @@ namespace AlertMe
         private bool _rated;
 
         public event PropertyChangedEventHandler PropertyChanged;
+        ProgressIndicator prog;
+
 
         Geolocator myGeoLocator;
         // Constructor
         public MainPage()
         {          
             InitializeComponent();
-            
+
+
+            SystemTray.SetIsVisible(this, true);
+            SystemTray.SetOpacity(this, 0.5);
+       //     SystemTray.SetBackgroundColor(this, Colors.Purple);
+      //      SystemTray.SetForegroundColor(this, Colors.Yellow);
+
+            prog = new ProgressIndicator();
+            prog.IsVisible = false;
+            prog.IsIndeterminate = false;
+            prog.Text = "Getting GPS location...";
+
+            SystemTray.SetProgressIndicator(this, prog);
+
+
+           
             Addresses = new List<string>();
-            GetGPSLocation();
             GetSettings();             
             BuildLocalizedApplicationBar();
 
@@ -68,8 +84,12 @@ namespace AlertMe
             //{
             //    Thread.Sleep(2000);
             //}
-  
+
+      
             this.DataContext = this;
+
+         //   SystemTray.ProgressIndicator = new ProgressIndicator();
+         
         }
 
         #region "Properties"
@@ -81,6 +101,8 @@ namespace AlertMe
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+ 
 
         private string _textStatusMessage;
         public string TextStatusMessage
@@ -169,10 +191,15 @@ namespace AlertMe
 
         #region "Methods"
 
+    
         private async void GetGPSLocation()
         {
             try
             {
+
+                prog.IsVisible = true;
+                prog.IsIndeterminate = true;
+
                 myGeoLocator = new Geolocator();
                 myGeoLocator.DesiredAccuracy = PositionAccuracy.Default;
                 myGeoLocator.MovementThreshold = 50;
@@ -217,7 +244,9 @@ namespace AlertMe
                         Address = address.HouseNumber + " " + address.Street + " " + address.City + " " + address.State + " " + address.PostalCode;
                     }
                 }
-
+                prog.IsVisible = false;
+                prog.IsIndeterminate = false;
+                SendTextAlert();
             }
             catch (Exception)
             {
@@ -227,7 +256,7 @@ namespace AlertMe
         private void SendTextAlert()
         {
             try
-            {
+            {             
                 UpdateSentTextCount(1);
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
                 smsComposeTask.To = "";
@@ -337,14 +366,9 @@ namespace AlertMe
             }
             else
             {
-                if (Address == string.Empty || Address == null)
-                {
-                    MessageBox.Show(AppResources.AddressNotFound);
-                }
-                else
-                {        
-                    SendTextAlert();
-                }
+                    
+                   GetGPSLocation();
+             
             }
         }
 
