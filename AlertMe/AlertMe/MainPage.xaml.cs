@@ -35,20 +35,15 @@ namespace AlertMe
         {          
             InitializeComponent();
 
-
             SystemTray.SetIsVisible(this, true);
             SystemTray.SetOpacity(this, 0.5);
-       //     SystemTray.SetBackgroundColor(this, Colors.Purple);
-      //      SystemTray.SetForegroundColor(this, Colors.Yellow);
-
+ 
             prog = new ProgressIndicator();
             prog.IsVisible = false;
             prog.IsIndeterminate = false;
             prog.Text = "Getting GPS location...";
 
             SystemTray.SetProgressIndicator(this, prog);
-
-
            
             Addresses = new List<string>();
             GetSettings();             
@@ -65,9 +60,6 @@ namespace AlertMe
                 App.gTextLimit = 5;
             }
 
-
-           // AlertButton = "/Assets/Button.jpg";
-
             if ((Application.Current as App).IsTrial)
             {
                 TextStatusMessage =AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
@@ -78,18 +70,8 @@ namespace AlertMe
                 TextStatusMessage = string.Empty;
                 TextStatusMessageVisibility = Visibility.Collapsed;
             };
-
-            ////If Address not found wait another 2 seconds to give it time
-            //if (Address == string.Empty || Address == null)
-            //{
-            //    Thread.Sleep(2000);
-            //}
-
       
-            this.DataContext = this;
-
-         //   SystemTray.ProgressIndicator = new ProgressIndicator();
-         
+            this.DataContext = this;        
         }
 
         #region "Properties"
@@ -191,14 +173,14 @@ namespace AlertMe
 
         #region "Methods"
 
-    
+   
         private async void GetGPSLocation()
         {
             try
             {
-
                 prog.IsVisible = true;
                 prog.IsIndeterminate = true;
+                prog.Text = "Getting GPS location...";
 
                 myGeoLocator = new Geolocator();
                 myGeoLocator.DesiredAccuracy = PositionAccuracy.Default;
@@ -209,7 +191,7 @@ namespace AlertMe
                 Latitude = geoposition.Coordinate.Latitude;
                 Longitude = geoposition.Coordinate.Longitude;
 
-               // MapURL = "https://www.google.com/maps/place/@" + Latitude + "," + Longitude;
+                // MapURL = "https://www.google.com/maps/place/@" + Latitude + "," + Longitude;
 
                 var reverseGeocode = new ReverseGeocodeQuery();
                 reverseGeocode.GeoCoordinate = new GeoCoordinate(geoposition.Coordinate.Latitude, Longitude);
@@ -217,8 +199,18 @@ namespace AlertMe
                 reverseGeocode.QueryAsync();
             }
 
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("Location is disabled in phone settings, please turn on to enable GPS location.");
+            }
             catch (Exception ex)
             {
+                MessageBox.Show("Error trying to get GPS location. Error = " + ex.Message);
+            }
+            finally
+            {
+                prog.IsVisible = false;
+                prog.IsIndeterminate = false;
             }
         }
 
