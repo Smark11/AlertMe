@@ -203,9 +203,9 @@ namespace AlertMe
             {
                 MessageBox.Show("Location is disabled in phone settings, please turn on to enable GPS location.");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error trying to get GPS location. Error = " + ex.Message);
+                MessageBox.Show("Location is disabled in phone settings, please turn on to enable GPS location.");
             }
             finally
             {
