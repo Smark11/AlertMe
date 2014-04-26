@@ -122,91 +122,91 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>nb-NO</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
+    <value>MIN SØKNAD</value>
   </data>
   <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+    <value>legge til</value>
   </data>
   <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+    <value>Menyelement</value>
   </data>
   <data name="AppMenuItemAbout" xml:space="preserve">
-    <value>About</value>
+    <value>Om</value>
   </data>
   <data name="AppMenuItemMoreApps" xml:space="preserve">
-    <value>More Apps</value>
+    <value>Flere apper</value>
   </data>
   <data name="AppMenuItemOptions" xml:space="preserve">
-    <value>Options</value>
+    <value>Alternativer</value>
   </data>
   <data name="Contact1Name" xml:space="preserve">
-    <value>Contact 1 Name</value>
+    <value>Kontakt 1</value>
   </data>
   <data name="Contact2Name" xml:space="preserve">
-    <value>Contact 2 Name</value>
+    <value>Kontakt 2</value>
   </data>
   <data name="CountdownTime" xml:space="preserve">
-    <value>Countdown Time</value>
+    <value>Nedtellingstiden</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Your Name</value>
+    <value>navnet ditt</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>AlertMe Options</value>
+    <value>Alternativer for AlertMe</value>
   </data>
   <data name="PlayAlarm" xml:space="preserve">
-    <value>Play Arm</value>
+    <value>Spille Arm</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>E-post</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Telefon</value>
   </data>
   <data name="SentTextCount" xml:space="preserve">
-    <value>Sent TextCount</value>
+    <value>Sendt TextCount</value>
   </data>
   <data name="EnableCountdown" xml:space="preserve">
-    <value>Enable Countdown</value>
+    <value>Aktiver Countdown</value>
   </data>
   <data name="MyLocationIs" xml:space="preserve">
-    <value>My location is: </value>
+    <value>Min posisjon er: </value>
   </data>
   <data name="TrialTextSent" xml:space="preserve">
-    <value>Trial Text Sent: </value>
+    <value>Prøve tekst sendt: </value>
   </data>
   <data name="AddressNotFound" xml:space="preserve">
-    <value>Could not determine address location. Please try again later.</value>
+    <value>Finner ikke adressen. Prøv igjen senere.</value>
   </data>
   <data name="PleasePurchase" xml:space="preserve">
-    <value>.  Please purchase app for unlimitted texts.</value>
+    <value>.  Kjøp app for unlimitted tekster.</value>
   </data>
   <data name="TextNotSentError" xml:space="preserve">
-    <value>Text not sent.  Error = </value>
+    <value>Teksten ikke sendt.  Feil = </value>
   </data>
   <data name="TrialMessage" xml:space="preserve">
-    <value>Your trial number of texts allowed to be sent is </value>
+    <value>Din prøve antall tekster kan sendes </value>
   </data>
   <data name="InitialTrial1" xml:space="preserve">
-    <value>Trial number of sent text has expired (</value>
+    <value>Prøve antall sendte tekst utløpt)</value>
   </data>
   <data name="InitialTrial2" xml:space="preserve">
-    <value>). To extend trial for another </value>
+    <value>). Utvide rettssak for et annet </value>
   </data>
   <data name="InitialTrial3" xml:space="preserve">
-    <value> texts please rate app.</value>
+    <value> tekster Ranger app.</value>
   </data>
   <data name="Rate" xml:space="preserve">
     <value>Rate</value>
   </data>
   <data name="GPSDisabled" xml:space="preserve">
-    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+    <value>Aktiver din stedstjenester ved å gå til innstillinger -&gt; sted -&gt; slå på stedstjenester alternativet.</value>
   </data>
   <data name="Purchase" xml:space="preserve">
-    <value>Purchase</value>
+    <value>Kjøp</value>
   </data>
 </root>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ko-KR" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="AlertMe" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.2.2017.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
+        </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">ko-KR</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
+        </trans-unit>
+        <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
+          <source>MY APPLICATION</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">내 응용 프로그램</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarButtonText" translate="yes" xml:space="preserve">
+          <source>add</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">추가</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarMenuItemText" translate="yes" xml:space="preserve">
+          <source>Menu Item</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">메뉴 항목</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemAbout" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">에 대 한</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemMoreApps" translate="yes" xml:space="preserve">
+          <source>More Apps</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">더 많은 애플 리 케이 션</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemOptions" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">옵션</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact1Name" translate="yes" xml:space="preserve">
+          <source>Contact 1 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">1 이름 문의</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact2Name" translate="yes" xml:space="preserve">
+          <source>Contact 2 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">문의 2 이름</target>
+        </trans-unit>
+        <trans-unit id="Resx/CountdownTime" translate="yes" xml:space="preserve">
+          <source>Countdown Time</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">카운트다운 시간</target>
+        </trans-unit>
+        <trans-unit id="Resx/Name" translate="yes" xml:space="preserve">
+          <source>Your Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">사용자 이름</target>
+        </trans-unit>
+        <trans-unit id="Resx/Options" translate="yes" xml:space="preserve">
+          <source>AlertMe Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">AlertMe 옵션</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlayAlarm" translate="yes" xml:space="preserve">
+          <source>Play Arm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">플레이 팔</target>
+        </trans-unit>
+        <trans-unit id="Resx/Email" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">메일 주소</target>
+        </trans-unit>
+        <trans-unit id="Resx/Phone" translate="yes" xml:space="preserve">
+          <source>Phone</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">전화</target>
+        </trans-unit>
+        <trans-unit id="Resx/SentTextCount" translate="yes" xml:space="preserve">
+          <source>Sent TextCount</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">보낸된 TextCount</target>
+        </trans-unit>
+        <trans-unit id="Resx/EnableCountdown" translate="yes" xml:space="preserve">
+          <source>Enable Countdown</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">카운트 다운을 사용 하도록 설정</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyLocationIs" translate="yes" xml:space="preserve">
+          <source>My location is: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">내 위치는: </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialTextSent" translate="yes" xml:space="preserve">
+          <source>Trial Text Sent: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">평가판 텍스트 전송: </target>
+        </trans-unit>
+        <trans-unit id="Resx/AddressNotFound" translate="yes" xml:space="preserve">
+          <source>Could not determine address location. Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">주소 위치를 확인할 수 없습니다. 나중에 다시 시도 하십시오.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PleasePurchase" translate="yes" xml:space="preserve">
+          <source>.  Please purchase app for unlimitted texts.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">.  Unlimitted 텍스트에 대 한 애플 리 케이 션을 구입 하시기 바랍니다.</target>
+        </trans-unit>
+        <trans-unit id="Resx/TextNotSentError" translate="yes" xml:space="preserve">
+          <source>Text not sent.  Error = </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">텍스트 전송 되지 않습니다.  오류 = </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialMessage" translate="yes" xml:space="preserve">
+          <source>Your trial number of texts allowed to be sent is </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">당신의 예 심 수가 텍스트 전송 </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial1" translate="yes" xml:space="preserve">
+          <source>Trial number of sent text has expired (</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">보낸된 텍스트의 시험 수 (만료</target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial2" translate="yes" xml:space="preserve">
+          <source>). To extend trial for another </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">). 또 다른 재판을 연장 </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial3" translate="yes" xml:space="preserve">
+          <source> texts please rate app.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> 텍스트 app를 평가해 주십시오.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Rate" translate="yes" xml:space="preserve">
+          <source>Rate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">속도</target>
+        </trans-unit>
+        <trans-unit id="Resx/GPSDisabled" translate="yes" xml:space="preserve">
+          <source>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">설정-&gt; 위치-&gt; 위치 서비스 옵션 설정으로 이동 하 여 위치 서비스를 활성화 하십시오.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Purchase" translate="yes" xml:space="preserve">
+          <source>Purchase</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">구매</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

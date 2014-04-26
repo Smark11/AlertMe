@@ -122,91 +122,91 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>es</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
+    <value>MI SOLICITUD</value>
   </data>
   <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+    <value>Añadir</value>
   </data>
   <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+    <value>Elemento de menú</value>
   </data>
   <data name="AppMenuItemAbout" xml:space="preserve">
-    <value>About</value>
+    <value>Acerca de</value>
   </data>
   <data name="AppMenuItemMoreApps" xml:space="preserve">
-    <value>More Apps</value>
+    <value>Más aplicaciones</value>
   </data>
   <data name="AppMenuItemOptions" xml:space="preserve">
-    <value>Options</value>
+    <value>Opciones</value>
   </data>
   <data name="Contact1Name" xml:space="preserve">
-    <value>Contact 1 Name</value>
+    <value>1 nombre de contacto</value>
   </data>
   <data name="Contact2Name" xml:space="preserve">
-    <value>Contact 2 Name</value>
+    <value>Nombre de contacto 2</value>
   </data>
   <data name="CountdownTime" xml:space="preserve">
-    <value>Countdown Time</value>
+    <value>Tiempo de cuenta regresiva</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Your Name</value>
+    <value>Te llamas</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>AlertMe Options</value>
+    <value>AlertMe opciones</value>
   </data>
   <data name="PlayAlarm" xml:space="preserve">
-    <value>Play Arm</value>
+    <value>Juego de brazo</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>Correo electrónico</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Teléfono</value>
   </data>
   <data name="SentTextCount" xml:space="preserve">
-    <value>Sent TextCount</value>
+    <value>Enviado TextCount</value>
   </data>
   <data name="EnableCountdown" xml:space="preserve">
-    <value>Enable Countdown</value>
+    <value>Habilitar la cuenta regresiva</value>
   </data>
   <data name="MyLocationIs" xml:space="preserve">
-    <value>My location is: </value>
+    <value>Mi ubicación es: </value>
   </data>
   <data name="TrialTextSent" xml:space="preserve">
-    <value>Trial Text Sent: </value>
+    <value>Ensayo texto enviado: </value>
   </data>
   <data name="AddressNotFound" xml:space="preserve">
-    <value>Could not determine address location. Please try again later.</value>
+    <value>No se puede determinar la ubicación de la dirección. Inténtalo de nuevo más tarde.</value>
   </data>
   <data name="PleasePurchase" xml:space="preserve">
-    <value>.  Please purchase app for unlimitted texts.</value>
+    <value>.  Por favor compra app para textos ilimitado.</value>
   </data>
   <data name="TextNotSentError" xml:space="preserve">
-    <value>Text not sent.  Error = </value>
+    <value>Texto no enviado.  Error = </value>
   </data>
   <data name="TrialMessage" xml:space="preserve">
-    <value>Your trial number of texts allowed to be sent is </value>
+    <value>Su juicio número de permiso para enviarse los textos es </value>
   </data>
   <data name="InitialTrial1" xml:space="preserve">
-    <value>Trial number of sent text has expired (</value>
+    <value>Número del ensayo del texto enviado ha caducado)</value>
   </data>
   <data name="InitialTrial2" xml:space="preserve">
-    <value>). To extend trial for another </value>
+    <value>). Para ampliar el juicio por otro </value>
   </data>
   <data name="InitialTrial3" xml:space="preserve">
-    <value> texts please rate app.</value>
+    <value> textos califique app.</value>
   </data>
   <data name="Rate" xml:space="preserve">
-    <value>Rate</value>
+    <value>Tasa</value>
   </data>
   <data name="GPSDisabled" xml:space="preserve">
-    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+    <value>Por favor habilita los servicios de localización por ir a ajustes -&gt; Ubicación -&gt; encienda la opción de servicios de localización.</value>
   </data>
   <data name="Purchase" xml:space="preserve">
-    <value>Purchase</value>
+    <value>Compra</value>
   </data>
 </root>

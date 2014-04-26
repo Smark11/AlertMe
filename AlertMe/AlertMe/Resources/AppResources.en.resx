@@ -122,7 +122,7 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>en</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
@@ -183,7 +183,7 @@
     <value>Could not determine address location. Please try again later.</value>
   </data>
   <data name="PleasePurchase" xml:space="preserve">
-    <value>.  Please purchase app for unlimitted texts.</value>
+    <value>.  Please purchase app for unlimited texts.</value>
   </data>
   <data name="TextNotSentError" xml:space="preserve">
     <value>Text not sent.  Error = </value>
@@ -204,7 +204,7 @@
     <value>Rate</value>
   </data>
   <data name="GPSDisabled" xml:space="preserve">
-    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+    <value>Please enable your location services by going to Settings-&gt; Location-&gt; Turn on Location Services option.</value>
   </data>
   <data name="Purchase" xml:space="preserve">
     <value>Purchase</value>

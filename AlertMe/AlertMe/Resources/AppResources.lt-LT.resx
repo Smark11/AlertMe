@@ -122,91 +122,91 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>lt-LT</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
+    <value>PRAŠYMO</value>
   </data>
   <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+    <value>pridėti</value>
   </data>
   <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+    <value>Meniu komanda</value>
   </data>
   <data name="AppMenuItemAbout" xml:space="preserve">
-    <value>About</value>
+    <value>Apie</value>
   </data>
   <data name="AppMenuItemMoreApps" xml:space="preserve">
-    <value>More Apps</value>
+    <value>Daugiau Apps</value>
   </data>
   <data name="AppMenuItemOptions" xml:space="preserve">
-    <value>Options</value>
+    <value>Parinktys</value>
   </data>
   <data name="Contact1Name" xml:space="preserve">
-    <value>Contact 1 Name</value>
+    <value>1 pavadinimas</value>
   </data>
   <data name="Contact2Name" xml:space="preserve">
-    <value>Contact 2 Name</value>
+    <value>2 pavadinimas</value>
   </data>
   <data name="CountdownTime" xml:space="preserve">
-    <value>Countdown Time</value>
+    <value>Atgalinìs atskaitos laik±</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Your Name</value>
+    <value>tavo vardas</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>AlertMe Options</value>
+    <value>AlertMe parinktys</value>
   </data>
   <data name="PlayAlarm" xml:space="preserve">
-    <value>Play Arm</value>
+    <value>Žaisti rankos</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>El. paštas</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Telefonas</value>
   </data>
   <data name="SentTextCount" xml:space="preserve">
-    <value>Sent TextCount</value>
+    <value>Išsiųsti TextCount</value>
   </data>
   <data name="EnableCountdown" xml:space="preserve">
-    <value>Enable Countdown</value>
+    <value>Įjungti Atgalinės atskaitos</value>
   </data>
   <data name="MyLocationIs" xml:space="preserve">
-    <value>My location is: </value>
+    <value>Mano vieta yra: </value>
   </data>
   <data name="TrialTextSent" xml:space="preserve">
-    <value>Trial Text Sent: </value>
+    <value>Bandomasis tekstas išsiųstas: </value>
   </data>
   <data name="AddressNotFound" xml:space="preserve">
-    <value>Could not determine address location. Please try again later.</value>
+    <value>Nepavyko nustatyti adresą. Bandykite v─ùliau.</value>
   </data>
   <data name="PleasePurchase" xml:space="preserve">
-    <value>.  Please purchase app for unlimitted texts.</value>
+    <value>.  Prašome įsigyti app unlimitted tekstus.</value>
   </data>
   <data name="TextNotSentError" xml:space="preserve">
-    <value>Text not sent.  Error = </value>
+    <value>Tekstas nebus siunčiamos.  Klaida = </value>
   </data>
   <data name="TrialMessage" xml:space="preserve">
-    <value>Your trial number of texts allowed to be sent is </value>
+    <value>Jūsų bandomasis leidžiama siųsti dokumentų skaičius yra </value>
   </data>
   <data name="InitialTrial1" xml:space="preserve">
-    <value>Trial number of sent text has expired (</value>
+    <value>Bandymų skaičius išsiųsti teksto baigėsi)</value>
   </data>
   <data name="InitialTrial2" xml:space="preserve">
-    <value>). To extend trial for another </value>
+    <value>). Pratęsti tyrimo dar </value>
   </data>
   <data name="InitialTrial3" xml:space="preserve">
-    <value> texts please rate app.</value>
+    <value> tekstus Prašome įvertinkite app.</value>
   </data>
   <data name="Rate" xml:space="preserve">
-    <value>Rate</value>
+    <value>Norma</value>
   </data>
   <data name="GPSDisabled" xml:space="preserve">
-    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+    <value>Įgalinkite vietos paslaugas eikite į nustatymai -&gt; vieta -&gt; įjungti parinktį vietos paslaugų.</value>
   </data>
   <data name="Purchase" xml:space="preserve">
-    <value>Purchase</value>
+    <value>Pirkimo</value>
   </data>
 </root>

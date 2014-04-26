@@ -122,91 +122,91 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>sv</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
+    <value>MIN ANSÖKAN</value>
   </data>
   <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+    <value>Lägg till</value>
   </data>
   <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+    <value>Menyalternativet</value>
   </data>
   <data name="AppMenuItemAbout" xml:space="preserve">
-    <value>About</value>
+    <value>Om</value>
   </data>
   <data name="AppMenuItemMoreApps" xml:space="preserve">
-    <value>More Apps</value>
+    <value>Mer Apps</value>
   </data>
   <data name="AppMenuItemOptions" xml:space="preserve">
-    <value>Options</value>
+    <value>Alternativ</value>
   </data>
   <data name="Contact1Name" xml:space="preserve">
-    <value>Contact 1 Name</value>
+    <value>Kontakta 1 namn</value>
   </data>
   <data name="Contact2Name" xml:space="preserve">
-    <value>Contact 2 Name</value>
+    <value>2 kontaktnamn</value>
   </data>
   <data name="CountdownTime" xml:space="preserve">
-    <value>Countdown Time</value>
+    <value>Nedräkningstiden</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Your Name</value>
+    <value>Ditt namn</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>AlertMe Options</value>
+    <value>AlertMe alternativ</value>
   </data>
   <data name="PlayAlarm" xml:space="preserve">
-    <value>Play Arm</value>
+    <value>Spela Arm</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>E-post</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Telefon</value>
   </data>
   <data name="SentTextCount" xml:space="preserve">
-    <value>Sent TextCount</value>
+    <value>Skickade TextCount</value>
   </data>
   <data name="EnableCountdown" xml:space="preserve">
-    <value>Enable Countdown</value>
+    <value>Aktivera nedräkning</value>
   </data>
   <data name="MyLocationIs" xml:space="preserve">
-    <value>My location is: </value>
+    <value>Min plats är: </value>
   </data>
   <data name="TrialTextSent" xml:space="preserve">
-    <value>Trial Text Sent: </value>
+    <value>Rättegång Text skickas: </value>
   </data>
   <data name="AddressNotFound" xml:space="preserve">
-    <value>Could not determine address location. Please try again later.</value>
+    <value>Kunde inte avgöra adress plats. Försök igen senare.</value>
   </data>
   <data name="PleasePurchase" xml:space="preserve">
-    <value>.  Please purchase app for unlimitted texts.</value>
+    <value>.  Vänligen köpa app för obegränsade texter.</value>
   </data>
   <data name="TextNotSentError" xml:space="preserve">
-    <value>Text not sent.  Error = </value>
+    <value>Texten skickas inte.  Fel = </value>
   </data>
   <data name="TrialMessage" xml:space="preserve">
-    <value>Your trial number of texts allowed to be sent is </value>
+    <value>Din rättegång antal texter som skickas är </value>
   </data>
   <data name="InitialTrial1" xml:space="preserve">
-    <value>Trial number of sent text has expired (</value>
+    <value>Prov antal skickade texten har löpt ut)</value>
   </data>
   <data name="InitialTrial2" xml:space="preserve">
-    <value>). To extend trial for another </value>
+    <value>). Att förlänga rättegången för en annan </value>
   </data>
   <data name="InitialTrial3" xml:space="preserve">
-    <value> texts please rate app.</value>
+    <value> texter gradera app.</value>
   </data>
   <data name="Rate" xml:space="preserve">
-    <value>Rate</value>
+    <value>Kurs</value>
   </data>
   <data name="GPSDisabled" xml:space="preserve">
-    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+    <value>Vänligen aktivera din platstjänster genom att gå till inställningar -&gt; plats -&gt; Aktivera platstjänster alternativet.</value>
   </data>
   <data name="Purchase" xml:space="preserve">
-    <value>Purchase</value>
+    <value>Köp</value>
   </data>
 </root>

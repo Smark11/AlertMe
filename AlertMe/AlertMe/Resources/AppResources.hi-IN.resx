@@ -122,91 +122,91 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>hi-IN</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
+    <value>मेरा आवेदन</value>
   </data>
   <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+    <value>जोड़ें</value>
   </data>
   <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+    <value>मेनू आइटम</value>
   </data>
   <data name="AppMenuItemAbout" xml:space="preserve">
-    <value>About</value>
+    <value>के बारे में</value>
   </data>
   <data name="AppMenuItemMoreApps" xml:space="preserve">
-    <value>More Apps</value>
+    <value>और अधिक Apps</value>
   </data>
   <data name="AppMenuItemOptions" xml:space="preserve">
-    <value>Options</value>
+    <value>विकल्प</value>
   </data>
   <data name="Contact1Name" xml:space="preserve">
-    <value>Contact 1 Name</value>
+    <value>1 नाम से संपर्क करें</value>
   </data>
   <data name="Contact2Name" xml:space="preserve">
-    <value>Contact 2 Name</value>
+    <value>संपर्क 2 का नाम</value>
   </data>
   <data name="CountdownTime" xml:space="preserve">
-    <value>Countdown Time</value>
+    <value>उलटी गिनती समय</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Your Name</value>
+    <value>तुम्हारा नाम</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>AlertMe Options</value>
+    <value>AlertMe विकल्प</value>
   </data>
   <data name="PlayAlarm" xml:space="preserve">
-    <value>Play Arm</value>
+    <value>हाथ खेलने</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>ईमेल</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>फोन</value>
   </data>
   <data name="SentTextCount" xml:space="preserve">
-    <value>Sent TextCount</value>
+    <value>भेजे गए TextCount</value>
   </data>
   <data name="EnableCountdown" xml:space="preserve">
-    <value>Enable Countdown</value>
+    <value>उलटी गिनती को सक्षम करें</value>
   </data>
   <data name="MyLocationIs" xml:space="preserve">
-    <value>My location is: </value>
+    <value>मेरा स्थान है: </value>
   </data>
   <data name="TrialTextSent" xml:space="preserve">
-    <value>Trial Text Sent: </value>
+    <value>परीक्षण पाठ भेजा: </value>
   </data>
   <data name="AddressNotFound" xml:space="preserve">
-    <value>Could not determine address location. Please try again later.</value>
+    <value>पता स्थान निर्धारित नहीं कर सका। कृपया बाद में पुन: प्रयास करें।</value>
   </data>
   <data name="PleasePurchase" xml:space="preserve">
-    <value>.  Please purchase app for unlimitted texts.</value>
+    <value>.  कृपया unlimitted ग्रंथों के लिए app खरीद।</value>
   </data>
   <data name="TextNotSentError" xml:space="preserve">
-    <value>Text not sent.  Error = </value>
+    <value>पाठ नहीं भेजा।  त्रुटि = </value>
   </data>
   <data name="TrialMessage" xml:space="preserve">
-    <value>Your trial number of texts allowed to be sent is </value>
+    <value>अपने परीक्षण संख्या ग्रंथों भेजा जा करने के लिए अनुमति दी गई है </value>
   </data>
   <data name="InitialTrial1" xml:space="preserve">
-    <value>Trial number of sent text has expired (</value>
+    <value>भेजे गए पाठ का परीक्षण संख्या समाप्त हो गया है (</value>
   </data>
   <data name="InitialTrial2" xml:space="preserve">
-    <value>). To extend trial for another </value>
+    <value>). एक और के लिए परीक्षण का विस्तार करने के लिए </value>
   </data>
   <data name="InitialTrial3" xml:space="preserve">
-    <value> texts please rate app.</value>
+    <value> ग्रंथों दर कृपया app.</value>
   </data>
   <data name="Rate" xml:space="preserve">
-    <value>Rate</value>
+    <value>दर</value>
   </data>
   <data name="GPSDisabled" xml:space="preserve">
-    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+    <value>कृपया अपने स्थान सेवाएँ सेटिंग्स -&gt; स्थान -&gt; स्थान सेवाएँ विकल्प पर बारी करने के लिए जा रहा द्वारा सक्षम है।</value>
   </data>
   <data name="Purchase" xml:space="preserve">
-    <value>Purchase</value>
+    <value>खरीद</value>
   </data>
 </root>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="it" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="AlertMe" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.2.2017.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
+        </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">it</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
+        </trans-unit>
+        <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
+          <source>MY APPLICATION</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">LA MIA APPLICAZIONE</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarButtonText" translate="yes" xml:space="preserve">
+          <source>add</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aggiungi</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarMenuItemText" translate="yes" xml:space="preserve">
+          <source>Menu Item</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voce di menu</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemAbout" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Circa</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemMoreApps" translate="yes" xml:space="preserve">
+          <source>More Apps</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Più applicazioni</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemOptions" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Opzioni</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact1Name" translate="yes" xml:space="preserve">
+          <source>Contact 1 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nome di contatto 1</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact2Name" translate="yes" xml:space="preserve">
+          <source>Contact 2 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nome contatto 2</target>
+        </trans-unit>
+        <trans-unit id="Resx/CountdownTime" translate="yes" xml:space="preserve">
+          <source>Countdown Time</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Conto alla rovescia</target>
+        </trans-unit>
+        <trans-unit id="Resx/Name" translate="yes" xml:space="preserve">
+          <source>Your Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il tuo nome</target>
+        </trans-unit>
+        <trans-unit id="Resx/Options" translate="yes" xml:space="preserve">
+          <source>AlertMe Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Opzioni AlertMe</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlayAlarm" translate="yes" xml:space="preserve">
+          <source>Play Arm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Giocare a braccio</target>
+        </trans-unit>
+        <trans-unit id="Resx/Email" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Posta elettronica</target>
+        </trans-unit>
+        <trans-unit id="Resx/Phone" translate="yes" xml:space="preserve">
+          <source>Phone</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Telefono</target>
+        </trans-unit>
+        <trans-unit id="Resx/SentTextCount" translate="yes" xml:space="preserve">
+          <source>Sent TextCount</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Inviato TextCount</target>
+        </trans-unit>
+        <trans-unit id="Resx/EnableCountdown" translate="yes" xml:space="preserve">
+          <source>Enable Countdown</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilitare il conto alla rovescia</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyLocationIs" translate="yes" xml:space="preserve">
+          <source>My location is: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">È la mia posizione: </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialTextSent" translate="yes" xml:space="preserve">
+          <source>Trial Text Sent: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prova testo inviato: </target>
+        </trans-unit>
+        <trans-unit id="Resx/AddressNotFound" translate="yes" xml:space="preserve">
+          <source>Could not determine address location. Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impossibile determinare la posizione di indirizzo. Riprova più tardi.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PleasePurchase" translate="yes" xml:space="preserve">
+          <source>.  Please purchase app for unlimitted texts.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">.  Si prega di acquistare app per testi illimitate.</target>
+        </trans-unit>
+        <trans-unit id="Resx/TextNotSentError" translate="yes" xml:space="preserve">
+          <source>Text not sent.  Error = </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Testo non inviato.  Errore = </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialMessage" translate="yes" xml:space="preserve">
+          <source>Your trial number of texts allowed to be sent is </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il numero di prova di testi che possano essere inviati è </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial1" translate="yes" xml:space="preserve">
+          <source>Trial number of sent text has expired (</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prova numero di testo inviato è scaduto (</target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial2" translate="yes" xml:space="preserve">
+          <source>). To extend trial for another </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">). Per estendere la prova per un altro </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial3" translate="yes" xml:space="preserve">
+          <source> texts please rate app.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> si prega di testi tasso app.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Rate" translate="yes" xml:space="preserve">
+          <source>Rate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tasso</target>
+        </trans-unit>
+        <trans-unit id="Resx/GPSDisabled" translate="yes" xml:space="preserve">
+          <source>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si prega di abilitare i servizi di posizione andando su impostazioni -&gt; posizione -&gt; Disabilita opzione servizi di localizzazione.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Purchase" translate="yes" xml:space="preserve">
+          <source>Purchase</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Acquisto</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

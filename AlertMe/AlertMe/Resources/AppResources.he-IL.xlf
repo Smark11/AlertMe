@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="he-IL" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="AlertMe" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.2.2017.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">RightToLeft</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
+        </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">he-IL</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
+        </trans-unit>
+        <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
+          <source>MY APPLICATION</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">הבקשה שלי</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarButtonText" translate="yes" xml:space="preserve">
+          <source>add</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">להוסיף</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarMenuItemText" translate="yes" xml:space="preserve">
+          <source>Menu Item</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">פריט התפריט</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemAbout" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">אודות</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemMoreApps" translate="yes" xml:space="preserve">
+          <source>More Apps</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">אפליקציות נוספות</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemOptions" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">אפשרויות</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact1Name" translate="yes" xml:space="preserve">
+          <source>Contact 1 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">שם איש קשר 1</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact2Name" translate="yes" xml:space="preserve">
+          <source>Contact 2 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">שם איש קשר 2</target>
+        </trans-unit>
+        <trans-unit id="Resx/CountdownTime" translate="yes" xml:space="preserve">
+          <source>Countdown Time</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">הספירה לאחור</target>
+        </trans-unit>
+        <trans-unit id="Resx/Name" translate="yes" xml:space="preserve">
+          <source>Your Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">שמך</target>
+        </trans-unit>
+        <trans-unit id="Resx/Options" translate="yes" xml:space="preserve">
+          <source>AlertMe Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">אפשרויות AlertMe</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlayAlarm" translate="yes" xml:space="preserve">
+          <source>Play Arm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">זרוע מחזה</target>
+        </trans-unit>
+        <trans-unit id="Resx/Email" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">דוא</target>
+        </trans-unit>
+        <trans-unit id="Resx/Phone" translate="yes" xml:space="preserve">
+          <source>Phone</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">טלפון</target>
+        </trans-unit>
+        <trans-unit id="Resx/SentTextCount" translate="yes" xml:space="preserve">
+          <source>Sent TextCount</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">TextCount שלח</target>
+        </trans-unit>
+        <trans-unit id="Resx/EnableCountdown" translate="yes" xml:space="preserve">
+          <source>Enable Countdown</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">לאפשר ספירה לאחור</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyLocationIs" translate="yes" xml:space="preserve">
+          <source>My location is: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">המיקום שלי הוא: </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialTextSent" translate="yes" xml:space="preserve">
+          <source>Trial Text Sent: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">שלח טקסט משפט: </target>
+        </trans-unit>
+        <trans-unit id="Resx/AddressNotFound" translate="yes" xml:space="preserve">
+          <source>Could not determine address location. Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">לא היתה אפשרות לקבוע את מיקום הכתובת. נא נסה שוב מאוחר יותר.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PleasePurchase" translate="yes" xml:space="preserve">
+          <source>.  Please purchase app for unlimitted texts.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">.  נא לרכוש app עבור טקסטים ללא הגבלה.</target>
+        </trans-unit>
+        <trans-unit id="Resx/TextNotSentError" translate="yes" xml:space="preserve">
+          <source>Text not sent.  Error = </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">טקסט לא נשלח.  שגיאה = </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialMessage" translate="yes" xml:space="preserve">
+          <source>Your trial number of texts allowed to be sent is </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">מספר טקסטים רשאית לשלוח הניסיון שלך </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial1" translate="yes" xml:space="preserve">
+          <source>Trial number of sent text has expired (</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">משפט מספר טקסט שנשלחה פג (</target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial2" translate="yes" xml:space="preserve">
+          <source>). To extend trial for another </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">). כדי להאריך את המשפט לעוד </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial3" translate="yes" xml:space="preserve">
+          <source> texts please rate app.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> טקסטים בבקשה שיעור app.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Rate" translate="yes" xml:space="preserve">
+          <source>Rate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">קצב</target>
+        </trans-unit>
+        <trans-unit id="Resx/GPSDisabled" translate="yes" xml:space="preserve">
+          <source>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">אנא הפעל שירותי המיקום שלך על-ידי מעבר להגדרות -&gt; מיקום -&gt; הפעל אפשרות שירותי איכון.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Purchase" translate="yes" xml:space="preserve">
+          <source>Purchase</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">רכישה</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

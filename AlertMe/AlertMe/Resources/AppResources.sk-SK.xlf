@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="sk-SK" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="AlertMe" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.2.2017.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
+        </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>en-US</source>
+          <target state="translated">sk-SK</target>
+          <note from="MultilingualBuild" priority="2" annotates="source">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
+        </trans-unit>
+        <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
+          <source>MY APPLICATION</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">MOJEJ ŽIADOSTI</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarButtonText" translate="yes" xml:space="preserve">
+          <source>add</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">pridať</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppBarMenuItemText" translate="yes" xml:space="preserve">
+          <source>Menu Item</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Položka ponuky</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemAbout" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">O</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemMoreApps" translate="yes" xml:space="preserve">
+          <source>More Apps</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Viac Apps</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppMenuItemOptions" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Možnosti</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact1Name" translate="yes" xml:space="preserve">
+          <source>Contact 1 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">1 meno kontaktu</target>
+        </trans-unit>
+        <trans-unit id="Resx/Contact2Name" translate="yes" xml:space="preserve">
+          <source>Contact 2 Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Meno kontaktu 2</target>
+        </trans-unit>
+        <trans-unit id="Resx/CountdownTime" translate="yes" xml:space="preserve">
+          <source>Countdown Time</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Odpočítavanie času</target>
+        </trans-unit>
+        <trans-unit id="Resx/Name" translate="yes" xml:space="preserve">
+          <source>Your Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">vaše meno</target>
+        </trans-unit>
+        <trans-unit id="Resx/Options" translate="yes" xml:space="preserve">
+          <source>AlertMe Options</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">AlertMe možnosti</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlayAlarm" translate="yes" xml:space="preserve">
+          <source>Play Arm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hrať Arm</target>
+        </trans-unit>
+        <trans-unit id="Resx/Email" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">E-mailom</target>
+        </trans-unit>
+        <trans-unit id="Resx/Phone" translate="yes" xml:space="preserve">
+          <source>Phone</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Telefón</target>
+        </trans-unit>
+        <trans-unit id="Resx/SentTextCount" translate="yes" xml:space="preserve">
+          <source>Sent TextCount</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Poslal TextCount</target>
+        </trans-unit>
+        <trans-unit id="Resx/EnableCountdown" translate="yes" xml:space="preserve">
+          <source>Enable Countdown</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Povoliť odpočítavanie</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyLocationIs" translate="yes" xml:space="preserve">
+          <source>My location is: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Moje miesto je: </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialTextSent" translate="yes" xml:space="preserve">
+          <source>Trial Text Sent: </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Skúšobný Text odoslaný: </target>
+        </trans-unit>
+        <trans-unit id="Resx/AddressNotFound" translate="yes" xml:space="preserve">
+          <source>Could not determine address location. Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nepodarilo sa určiť umiestnenie adresu. Skúste znova neskôr.</target>
+        </trans-unit>
+        <trans-unit id="Resx/PleasePurchase" translate="yes" xml:space="preserve">
+          <source>.  Please purchase app for unlimitted texts.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">.  Prosím kúpiť app unlimitted textov.</target>
+        </trans-unit>
+        <trans-unit id="Resx/TextNotSentError" translate="yes" xml:space="preserve">
+          <source>Text not sent.  Error = </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Text neodošle.  Chyba = </target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialMessage" translate="yes" xml:space="preserve">
+          <source>Your trial number of texts allowed to be sent is </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vaše skúšobné počet textov povolené zaslať </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial1" translate="yes" xml:space="preserve">
+          <source>Trial number of sent text has expired (</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Skúšobné množstvo odoslané textové uplynula)</target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial2" translate="yes" xml:space="preserve">
+          <source>). To extend trial for another </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">). Rozšíriť pre ďalší proces </target>
+        </trans-unit>
+        <trans-unit id="Resx/InitialTrial3" translate="yes" xml:space="preserve">
+          <source> texts please rate app.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> Texty prosím hodnotiť app.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Rate" translate="yes" xml:space="preserve">
+          <source>Rate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sadzba</target>
+        </trans-unit>
+        <trans-unit id="Resx/GPSDisabled" translate="yes" xml:space="preserve">
+          <source>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Povoľte lokalizačných služieb tým, že pôjdete do nastavenia -&gt; polohu -&gt; zapnúť možnosť umiestnenia služieb.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Purchase" translate="yes" xml:space="preserve">
+          <source>Purchase</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nákup</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

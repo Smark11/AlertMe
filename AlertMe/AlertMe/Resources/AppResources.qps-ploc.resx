@@ -122,91 +122,91 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>qps-ploc</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
+    <value>[DF90C][!!_МÝ ÁÞРĻÍĊÃΤÎÓŇ_!!!!]</value>
   </data>
   <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+    <value>[6F3A0][!!_ãðđ_!!]</value>
   </data>
   <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+    <value>[0176B][!!_Мêиû Îťêм_!!]</value>
   </data>
   <data name="AppMenuItemAbout" xml:space="preserve">
-    <value>About</value>
+    <value>[F6187][!!_Ãьòùτ_!!]</value>
   </data>
   <data name="AppMenuItemMoreApps" xml:space="preserve">
-    <value>More Apps</value>
+    <value>[8099D][!!_Μòŗè Áρρš_!!]</value>
   </data>
   <data name="AppMenuItemOptions" xml:space="preserve">
-    <value>Options</value>
+    <value>[2D5C4][!!_Òрτíôηś_!!]</value>
   </data>
   <data name="Contact1Name" xml:space="preserve">
-    <value>Contact 1 Name</value>
+    <value>[6019C][!!_Ćòйтáčţ 1 Ňãmê_!!!!]</value>
   </data>
   <data name="Contact2Name" xml:space="preserve">
-    <value>Contact 2 Name</value>
+    <value>[5E58B][!!_Ċòитàčť 2 Ņámè_!!!!]</value>
   </data>
   <data name="CountdownTime" xml:space="preserve">
-    <value>Countdown Time</value>
+    <value>[F65CC][!!_Ĉõûиţďôẁή Тįmè_!!!!]</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Your Name</value>
+    <value>[86DDF][!!_Ýòµѓ Ñãмé_!!]</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>AlertMe Options</value>
+    <value>[C3B0A][!!_ÁłéŕţМé Õþτįôηş_!!!!]</value>
   </data>
   <data name="PlayAlarm" xml:space="preserve">
-    <value>Play Arm</value>
+    <value>[34216][!!_Þľáŷ Ãŕm_!!]</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>[FE092][!!_Èмàíļ_!!]</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>[CBAFB][!!_Ρћòиę_!!]</value>
   </data>
   <data name="SentTextCount" xml:space="preserve">
-    <value>Sent TextCount</value>
+    <value>[F85B8][!!_Śęиţ Ţé×ťĆõúит_!!!!]</value>
   </data>
   <data name="EnableCountdown" xml:space="preserve">
-    <value>Enable Countdown</value>
+    <value>[17FAD][!!_Èиâьľè Ĉôµήţðòẁи_!!!!]</value>
   </data>
   <data name="MyLocationIs" xml:space="preserve">
-    <value>My location is: </value>
+    <value>[4CF0B][!!_Μý łõčáţíôи íş: _!!!!]</value>
   </data>
   <data name="TrialTextSent" xml:space="preserve">
-    <value>Trial Text Sent: </value>
+    <value>[1763F][!!_Тŕíâļ Τę×ţ Şèήţ: _!!!!!!]</value>
   </data>
   <data name="AddressNotFound" xml:space="preserve">
-    <value>Could not determine address location. Please try again later.</value>
+    <value>[15F6F][!!_Čôûľď йòτ đęтêŕmįйê áďďѓêŝš ľóčâťìõи. Ρļéášê тřУ ãģâìи ľãτêŗ._!!!!!!!!!!!!!!!!!!]</value>
   </data>
   <data name="PleasePurchase" xml:space="preserve">
-    <value>.  Please purchase app for unlimitted texts.</value>
+    <value>[B0D92][!!_.  Þļéâśę þùřĉнàśè ãρр ƒôř úиłìмįттéď τéхτś._!!!!!!!!!!!!!!]</value>
   </data>
   <data name="TextNotSentError" xml:space="preserve">
-    <value>Text not sent.  Error = </value>
+    <value>[AE665][!!_Тęхτ иõţ šęήť.  Ęřŕõŗ = _!!!!!!!!]</value>
   </data>
   <data name="TrialMessage" xml:space="preserve">
-    <value>Your trial number of texts allowed to be sent is </value>
+    <value>[713B8][!!_Ỳõµŗ ťřìâľ иúмъèŕ õƒ ţé×τš àĺĺòẁęđ ţõ ьé śèйť íş _!!!!!!!!!!!!!!]</value>
   </data>
   <data name="InitialTrial1" xml:space="preserve">
-    <value>Trial number of sent text has expired (</value>
+    <value>[BC53B][!!_Ţѓìãĺ ηµмвêř òƒ śèйт ţęхţ ђâś èхρįŕéđ (_!!!!!!!!!!!!]</value>
   </data>
   <data name="InitialTrial2" xml:space="preserve">
-    <value>). To extend trial for another </value>
+    <value>[BBC93][!!_). Тõ éхťéиď τŕíâľ ƒôř áήóťħęŕ _!!!!!!!!!!]</value>
   </data>
   <data name="InitialTrial3" xml:space="preserve">
-    <value> texts please rate app.</value>
+    <value>[7AA0F][!!_ τę×τş рłęàŝé ŗãţę áрρ._!!!!!!]</value>
   </data>
   <data name="Rate" xml:space="preserve">
-    <value>Rate</value>
+    <value>[B64F5][!!_Ŕãτè_!!]</value>
   </data>
   <data name="GPSDisabled" xml:space="preserve">
-    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+    <value>[4A688][!!_Ρļéáŝê ęйáьĺę ÿôµŗ ļòčâтįôη şéŗνîčęś ъÿ ģõíиĝ тõ Ŝéтţîηğš -&gt; Ĺòćâтîóй -&gt; Тûŗή ôη Ļòċàťįòи Ŝęѓνíčèş òρтîóи._!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]</value>
   </data>
   <data name="Purchase" xml:space="preserve">
-    <value>Purchase</value>
+    <value>[2C026][!!_Рûѓčĥãşè_!!]</value>
   </data>
 </root>

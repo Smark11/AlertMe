@@ -187,7 +187,7 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ) To extend trial for another .
+        ///   Looks up a localized string similar to ). To extend trial for another .
         /// </summary>
         public static string InitialTrial2 {
             get {
@@ -250,7 +250,7 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .  Please purchase application for unlimitted texts..
+        ///   Looks up a localized string similar to .  Please purchase app for unlimitted texts..
         /// </summary>
         public static string PleasePurchase {
             get {
