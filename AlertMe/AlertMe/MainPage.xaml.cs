@@ -52,12 +52,12 @@ namespace AlertMe
             if (Rate.HasAppBeenRated().ToUpper() == "YES")
             {
                 _rated = true;
-                App.gTextLimit = 10;
+                App.gTextLimit = App.gTextLimitExtended;
             }
             else
             {
                 _rated = false;
-                App.gTextLimit = 5;
+                App.gTextLimit = App.gTextLimitTrial;
             }
 
             if ((Application.Current as App).IsTrial)
@@ -315,25 +315,27 @@ namespace AlertMe
             //ApplicationBar.Buttons.Add(appBarButton2);
             //appBarButton2.Click += new EventHandler(DeleteLaps_Click);
 
-            // Create a new menu item with the localized string from AppResources.
-            //ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppMenuItemOptions);
-            //ApplicationBar.MenuItems.Add(appBarMenuItem);
-            //appBarMenuItem.Click += new EventHandler(Options_Click);
+            ApplicationBarMenuItem appBarMenuItem1 = new ApplicationBarMenuItem(AppResources.AppMenuItemAbout);
+            ApplicationBar.MenuItems.Add(appBarMenuItem1);
+            appBarMenuItem1.Click += new EventHandler(About_Click);
 
-            ApplicationBarMenuItem appBarMenuItem2 = new ApplicationBarMenuItem(AppResources.AppMenuItemAbout);
+            ApplicationBarMenuItem appBarMenuItem2 = new ApplicationBarMenuItem(AppResources.AppMenuItemMoreApps);
             ApplicationBar.MenuItems.Add(appBarMenuItem2);
-            appBarMenuItem2.Click += new EventHandler(About_Click);
-
-            ApplicationBarMenuItem appBarMenuItem4 = new ApplicationBarMenuItem(AppResources.AppMenuItemMoreApps);
-            ApplicationBar.MenuItems.Add(appBarMenuItem4);
-            appBarMenuItem4.Click += new EventHandler(MoreApps_Click);
+            appBarMenuItem2.Click += new EventHandler(MoreApps_Click);
 
             //Only add the "rate" button if the app has not been rated yet.
             if (!_rated)
             {
-                ApplicationBarMenuItem appBarMenuItem5 = new ApplicationBarMenuItem(AppResources.Rate);
-                ApplicationBar.MenuItems.Add(appBarMenuItem5);
-                appBarMenuItem5.Click += new EventHandler(Review_Click);
+                ApplicationBarMenuItem appBarMenuItem3 = new ApplicationBarMenuItem(AppResources.Rate);
+                ApplicationBar.MenuItems.Add(appBarMenuItem3);
+                appBarMenuItem3.Click += new EventHandler(Review_Click);
+            }
+
+            if ((Application.Current as App).IsTrial)
+            {
+                ApplicationBarMenuItem appBarMenuItem4 = new ApplicationBarMenuItem(AppResources.Purchase);
+                ApplicationBar.MenuItems.Add(appBarMenuItem4);
+                appBarMenuItem4.Click += new EventHandler(Purchase_Click);
             }
         }
 
@@ -382,7 +384,7 @@ namespace AlertMe
             IS.SaveSetting("AppRated", "Yes");
             _rated = true;
 
-            App.gTextLimit = 10;
+            App.gTextLimit = App.gTextLimitExtended;
             TextStatusMessage = AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;
         }
 
@@ -392,6 +394,12 @@ namespace AlertMe
 
             marketplaceSearchTask.SearchTerms = "KLBCreations";
             marketplaceSearchTask.Show();
+        }
+
+        private void Purchase_Click(object sender, EventArgs e)
+        {
+            MarketplaceDetailTask marketplaceDetailTask = new MarketplaceDetailTask();
+            marketplaceDetailTask.Show();
         }
 
         #endregion "Events"

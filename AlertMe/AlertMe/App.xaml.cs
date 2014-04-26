@@ -22,7 +22,9 @@ namespace AlertMe
 
        
         public static int gSentTextCount;
-        public static int gTextLimit = 5;
+        public static int gTextLimit;
+        public static int gTextLimitTrial = 5;
+        public static int gTextLimitExtended = 10;
         private static LicenseInformation _licenseInfo = new LicenseInformation();
 
 

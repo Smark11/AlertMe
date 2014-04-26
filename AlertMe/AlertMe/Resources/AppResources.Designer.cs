@@ -259,6 +259,15 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Purchase.
+        /// </summary>
+        public static string Purchase {
+            get {
+                return ResourceManager.GetString("Purchase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rate.
         /// </summary>
         public static string Rate {
