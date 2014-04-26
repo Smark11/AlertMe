@@ -169,6 +169,15 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option..
+        /// </summary>
+        public static string GPSDisabled {
+            get {
+                return ResourceManager.GetString("GPSDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trial number of sent text has expired (.
         /// </summary>
         public static string InitialTrial1 {

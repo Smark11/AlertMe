@@ -203,4 +203,7 @@
   <data name="Rate" xml:space="preserve">
     <value>Rate</value>
   </data>
+  <data name="GPSDisabled" xml:space="preserve">
+    <value>Please enable your location services by going to Settings -&gt; Location -&gt; Turn on Location Services option.</value>
+  </data>
 </root>
