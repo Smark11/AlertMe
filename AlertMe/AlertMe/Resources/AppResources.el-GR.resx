@@ -209,4 +209,8 @@
   <data name="Purchase" xml:space="preserve">
     <value>Αγορά</value>
   </data>
-</root>
+<data name="_KeyWord5" xml:space="preserve"><value>Σημείο</value></data><data name="_KeyWord4" xml:space="preserve"><value>τοπικές ρυθμίσεις</value></data><data name="_KeyWord3" xml:space="preserve"><value>θέση</value></data><data name="_KeyWord2" xml:space="preserve"><value>Εδώ είμαι</value></data><data name="_KeyWord1" xml:space="preserve"><value>GPS</value></data><data name="_Description" xml:space="preserve"><value>Στείλτε τη θέση σας ως ένα κείμενο στο 1 βήμα!
+
+Απλούστερη app στην αγορά, υψηλή ακρίβεια.  Με ένα κλικ μπορείτε να στείλετε τη θέση σας ως κείμενο.  Το κείμενο θα έχει τη διεύθυνση, και μια σύνδεση με το google maps.
+
+Κατεβάστε σήμερα!</value></data></root>

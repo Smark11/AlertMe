@@ -209,4 +209,8 @@
   <data name="Purchase" xml:space="preserve">
     <value>Köp</value>
   </data>
-</root>
+<data name="_KeyWord5" xml:space="preserve"><value>Plats</value></data><data name="_KeyWord4" xml:space="preserve"><value>Locale</value></data><data name="_KeyWord3" xml:space="preserve"><value>Läge</value></data><data name="_KeyWord2" xml:space="preserve"><value>Här är jag</value></data><data name="_KeyWord1" xml:space="preserve"><value>GPS</value></data><data name="_Description" xml:space="preserve"><value>Skicka din plats som en text i 1 steg!
+
+Enklaste app på marknaden, hög noggrannhet.  Med ett klick kan du skicka din plats som en text.  Texten har adressen, och en länk till google maps.
+
+Hämta idag!</value></data></root>

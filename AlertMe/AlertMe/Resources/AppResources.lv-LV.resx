@@ -209,4 +209,8 @@
   <data name="Purchase" xml:space="preserve">
     <value>Pirkšanas</value>
   </data>
-</root>
+<data name="_KeyWord5" xml:space="preserve"><value>Prožektors</value></data><data name="_KeyWord4" xml:space="preserve"><value>lokalizācija</value></data><data name="_KeyWord3" xml:space="preserve"><value>atrašanās vieta</value></data><data name="_KeyWord2" xml:space="preserve"><value>Te nu es esmu</value></data><data name="_KeyWord1" xml:space="preserve"><value>GPS</value></data><data name="_Description" xml:space="preserve"><value>Nosūtīt savu atrašanās vietu, kā tekstu 1. solī!
+
+Vienkāršākais app tirgū, augstas precizitātes.  Ar vienu klikšķi varat nosūtīt savu atrašanās vietu kā tekstu.  Teksts būs adrese un saiti uz google maps.
+
+Lejupielādēt šodien!</value></data></root>

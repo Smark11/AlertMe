@@ -209,4 +209,8 @@
   <data name="Purchase" xml:space="preserve">
     <value>Vásárlás</value>
   </data>
-</root>
+<data name="_KeyWord5" xml:space="preserve"><value>Pont</value></data><data name="_KeyWord4" xml:space="preserve"><value>területi beállítás</value></data><data name="_KeyWord3" xml:space="preserve"><value>hely</value></data><data name="_KeyWord2" xml:space="preserve"><value>Itt vagyok</value></data><data name="_KeyWord1" xml:space="preserve"><value>GPS</value></data><data name="_Description" xml:space="preserve"><value>Küld a helyét egy szöveges formában 1 lépés!
+
+Legegyszerűbb app a piacon, magas pontosság.  Egyetlen kattintással szövegként küldhet a tartózkodási helyünket.  A szöveg a cím lesz, és egy linket a google maps.
+
+Töltse le még ma!</value></data></root>

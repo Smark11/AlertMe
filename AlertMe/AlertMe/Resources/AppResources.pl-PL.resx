@@ -209,4 +209,8 @@
   <data name="Purchase" xml:space="preserve">
     <value>Zakup</value>
   </data>
-</root>
+<data name="_KeyWord5" xml:space="preserve"><value>Punktowe</value></data><data name="_KeyWord4" xml:space="preserve"><value>ustawienia regionalne</value></data><data name="_KeyWord3" xml:space="preserve"><value>lokalizacja</value></data><data name="_KeyWord2" xml:space="preserve"><value>Jestem tutaj</value></data><data name="_KeyWord1" xml:space="preserve"><value>GPS</value></data><data name="_Description" xml:space="preserve"><value>Wyślij swoją lokalizację jako tekst w kroku 1!
+
+Najprostszych aplikacji na rynku, wysoką dokładność.  Jednym kliknięciem można wysyłać swoją pozycję jako tekst.  Tekst będzie mieć adres, oraz link do google maps.
+
+Pobierz dzisiaj!</value></data></root>

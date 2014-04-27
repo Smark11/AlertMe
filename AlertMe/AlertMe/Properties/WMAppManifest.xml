@@ -39,8 +39,8 @@
     <Language code="zh-Hans" />
     <Language code="zh-Hant" />
   </Languages>
-  <App xmlns="" ProductID="{3d65e04a-db6f-4ada-88c8-1d70d38bddc8}" Title="AlertMe" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="AlertMe author" Description="Sample description" Publisher="AlertMe" PublisherID="{1f994e35-d082-4034-a41d-b232ca6fede8}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{3d65e04a-db6f-4ada-88c8-1d70d38bddc8}" Title="Here I Am" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="AlertMe author" Description="Send your location as a text in 1 step!&#xD;&#xA;&#xD;&#xA;Simplest app on the market, high accuracy.  With one click you can send your location as a text.  The text will have the address, and a link to google maps.&#xD;&#xA;&#xD;&#xA;Download today!" Publisher="AlertMe" PublisherID="{1f994e35-d082-4034-a41d-b232ca6fede8}">
+    <IconPath IsRelative="true" IsResource="false">MapPin-BlackApp.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -56,17 +56,25 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="AlertMeToken" TaskName="_default">
-        <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+        <TemplateIconic>
+          <SmallImageURI IsRelative="true" IsResource="false">MapPin-Black110x110.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>AlertMe</Title>
-          <BackContent></BackContent>
-          <BackBackgroundImageURI></BackBackgroundImageURI>
-          <BackTitle></BackTitle>
-          <DeviceLockImageURI></DeviceLockImageURI>
-          <HasLarge></HasLarge>
-        </TemplateFlip>
+          <IconImageURI IsRelative="true" IsResource="false">MapPin-Black202x202.png</IconImageURI>
+          <Title>Here I Am</Title>
+          <Message>
+          </Message>
+          <BackgroundColor>
+          </BackgroundColor>
+          <HasLarge>False</HasLarge>
+          <LargeContent1>
+          </LargeContent1>
+          <LargeContent2>
+          </LargeContent2>
+          <LargeContent3>
+          </LargeContent3>
+          <DeviceLockImageURI IsRelative="true" IsResource="false">
+          </DeviceLockImageURI>
+        </TemplateIconic>
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>

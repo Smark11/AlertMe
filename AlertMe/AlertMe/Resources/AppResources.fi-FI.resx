@@ -209,4 +209,8 @@
   <data name="Purchase" xml:space="preserve">
     <value>Osto</value>
   </data>
-</root>
+<data name="_KeyWord5" xml:space="preserve"><value>Piste</value></data><data name="_KeyWord4" xml:space="preserve"><value>Maa-asetus:</value></data><data name="_KeyWord3" xml:space="preserve"><value>sijainti</value></data><data name="_KeyWord2" xml:space="preserve"><value>Tässä olen</value></data><data name="_KeyWord1" xml:space="preserve"><value>GPS</value></data><data name="_Description" xml:space="preserve"><value>Lähetä sijainti tekstinä 1 askel!
+
+Yksinkertaisin app markkinoilla korkean tarkkuuden.  Yhdellä napsautuksella voit lähettää sijaintisi tekstinä.  Teksti on osoite ja linkki google maps.
+
+Lataa tänään!</value></data></root>

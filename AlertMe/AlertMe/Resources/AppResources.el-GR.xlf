@@ -2,20 +2,20 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="el-GR" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="AlertMe" product-version="1.0.0.0" build-num="0">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.2.2017.0" tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.2010.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="Resx">
         <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
           <source>LeftToRight</source>
           <target state="translated">LeftToRight</target>
-          <note from="MultilingualBuild" priority="2" annotates="source">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
-        </trans-unit>
+          
+        <note from="MultilingualBuild" annotates="source" priority="2">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note></trans-unit>
         <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
           <source>en-US</source>
           <target state="translated">el-GR</target>
-          <note from="MultilingualBuild" priority="2" annotates="source">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
-        </trans-unit>
+          
+        <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
         <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
           <source>MY APPLICATION</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ΑΊΤΗΣΉ ΜΟΥ</target>
@@ -127,6 +127,38 @@
         <trans-unit id="Resx/Purchase" translate="yes" xml:space="preserve">
           <source>Purchase</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Αγορά</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord5" xml:space="preserve">
+          <source>Spot</source>
+          <target state="translated" state-qualifier="tm-suggestion">Σημείο</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord4" xml:space="preserve">
+          <source>Locale</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">τοπικές ρυθμίσεις</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord3" xml:space="preserve">
+          <source>Location</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">θέση</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord2" xml:space="preserve">
+          <source>Here I am</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Εδώ είμαι</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord1" xml:space="preserve">
+          <source>GPS</source>
+          <target state="translated" state-qualifier="tm-suggestion">GPS</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_Description" xml:space="preserve">
+          <source>Send your location as a text in 1 step!
+
+Simplest app on the market, high accuracy.  With one click you can send your location as a text.  The text will have the address, and a link to google maps.
+
+Download today!</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Στείλτε τη θέση σας ως ένα κείμενο στο 1 βήμα!
+
+Απλούστερη app στην αγορά, υψηλή ακρίβεια.  Με ένα κλικ μπορείτε να στείλετε τη θέση σας ως κείμενο.  Το κείμενο θα έχει τη διεύθυνση, και μια σύνδεση με το google maps.
+
+Κατεβάστε σήμερα!</target>
         </trans-unit>
       </group>
     </body>

@@ -83,8 +83,8 @@ namespace AlertMe
 
         private void CheckLicence()
         {
-            _isTrial = true;
-           // _isTrial = _licenseInfo.IsTrial();
+            _isTrial = false;
+            //_isTrial = _licenseInfo.IsTrial();
         }
 
         #endregion "Methods"

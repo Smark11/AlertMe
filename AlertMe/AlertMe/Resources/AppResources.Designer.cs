@@ -61,6 +61,64 @@ namespace AlertMe.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send your location as a text in 1 step!
+        ///
+        ///Simplest app on the market, high accuracy.  With one click you can send your location as a text.  The text will have the address, and a link to google maps.
+        ///
+        ///Download today!.
+        /// </summary>
+        public static string _Description {
+            get {
+                return ResourceManager.GetString("_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GPS.
+        /// </summary>
+        public static string _KeyWord1 {
+            get {
+                return ResourceManager.GetString("_KeyWord1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Here I am.
+        /// </summary>
+        public static string _KeyWord2 {
+            get {
+                return ResourceManager.GetString("_KeyWord2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string _KeyWord3 {
+            get {
+                return ResourceManager.GetString("_KeyWord3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locale.
+        /// </summary>
+        public static string _KeyWord4 {
+            get {
+                return ResourceManager.GetString("_KeyWord4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spot.
+        /// </summary>
+        public static string _KeyWord5 {
+            get {
+                return ResourceManager.GetString("_KeyWord5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Could not determine address location. Please try again later..
         /// </summary>
         public static string AddressNotFound {

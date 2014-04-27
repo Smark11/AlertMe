@@ -209,4 +209,8 @@
   <data name="Purchase" xml:space="preserve">
     <value>Покупка</value>
   </data>
-</root>
+<data name="_KeyWord5" xml:space="preserve"><value>Точков</value></data><data name="_KeyWord4" xml:space="preserve"><value>Езикова информация</value></data><data name="_KeyWord3" xml:space="preserve"><value>местоположение</value></data><data name="_KeyWord2" xml:space="preserve"><value>Аз съм тук</value></data><data name="_KeyWord1" xml:space="preserve"><value>GPS</value></data><data name="_Description" xml:space="preserve"><value>Изпратете вашето местоположение като текст в 1 стъпка!
+
+-Простият ап на пазара, висока точност.  С едно кликване можете да изпратите вашето местоположение като текст.  Текстът ще трябва адреса, и връзка към google карти.
+
+Изтегляне днес!</value></data></root>

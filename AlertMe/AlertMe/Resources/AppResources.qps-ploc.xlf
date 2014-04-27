@@ -2,20 +2,20 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="qps-ploc" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="AlertMe" product-version="1.0.0.0" build-num="0">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.2.2017.0" tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="2.1.2010.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="Resx">
         <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
           <source>LeftToRight</source>
           <target state="translated">LeftToRight</target>
-          <note from="MultilingualBuild" priority="2" annotates="source">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
-        </trans-unit>
+          
+        <note from="MultilingualBuild" annotates="source" priority="2">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note></trans-unit>
         <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
           <source>en-US</source>
           <target state="translated">qps-ploc</target>
-          <note from="MultilingualBuild" priority="2" annotates="source">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
-        </trans-unit>
+          
+        <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note></trans-unit>
         <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
           <source>MY APPLICATION</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[DF90C][!!_МÝ ÁÞРĻÍĊÃΤÎÓŇ_!!!!]</target>
@@ -127,6 +127,38 @@
         <trans-unit id="Resx/Purchase" translate="yes" xml:space="preserve">
           <source>Purchase</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">[2C026][!!_Рûѓčĥãşè_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord5" xml:space="preserve">
+          <source>Spot</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[3FD9D][!!_Śрóт_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord4" xml:space="preserve">
+          <source>Locale</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[21644][!!_Ŀõċâĺę_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord3" xml:space="preserve">
+          <source>Location</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[F3D86][!!_Ļòċàťìòй_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord2" xml:space="preserve">
+          <source>Here I am</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[DD7E2][!!_Ήéřê Ì ãм_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_KeyWord1" xml:space="preserve">
+          <source>GPS</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[5ABCA][!!_ĠРŞ_!!]</target>
+        </trans-unit>
+        <trans-unit translate="yes" id="Resx/_Description" xml:space="preserve">
+          <source>Send your location as a text in 1 step!
+
+Simplest app on the market, high accuracy.  With one click you can send your location as a text.  The text will have the address, and a link to google maps.
+
+Download today!</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">[F8702][!!_Şêηð ÿóúѓ ľòĉáťįôи âś à тé×т îη 1 śтêþ!
+
+Šìmрļèśţ àþþ óή τħê мàѓĸèτ, ħìġћ ãčćûŕàĉУ.  Ŵįτĥ óйé čļìĉķ ýôû ċâή śêήð ŷóùŗ ļóćãтįòή âş ã ťè×ť.  Ťћê ťé×т ŵíļļ ђàνê τнè àďðѓéŝŝ, àήď á ļįήķ ťò ĝóôġłè мâρś.
+
+Ðóẁήłõâđ тôďãў!_!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]</target>
         </trans-unit>
       </group>
     </body>

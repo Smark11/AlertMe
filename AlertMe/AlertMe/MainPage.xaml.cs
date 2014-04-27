@@ -32,21 +32,23 @@ namespace AlertMe
         Geolocator myGeoLocator;
         // Constructor
         public MainPage()
-        {          
+        {
             InitializeComponent();
-            
+
+            btnalert.IsEnabled = true;
+
             SystemTray.SetIsVisible(this, true);
-            SystemTray.SetOpacity(this, 0.5);
- 
+            SystemTray.SetOpacity(this, .9);
+
             prog = new ProgressIndicator();
             prog.IsVisible = false;
             prog.IsIndeterminate = false;
             prog.Text = "Getting GPS location...";
 
             SystemTray.SetProgressIndicator(this, prog);
-           
+
             Addresses = new List<string>();
-            GetSettings();             
+            GetSettings();
             BuildLocalizedApplicationBar();
 
             if (Rate.HasAppBeenRated().ToUpper() == "YES")
@@ -62,7 +64,7 @@ namespace AlertMe
 
             if ((Application.Current as App).IsTrial)
             {
-                TextStatusMessage =AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
+                TextStatusMessage = AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;
                 TextStatusMessageVisibility = Visibility.Visible;
             }
             else
@@ -70,8 +72,8 @@ namespace AlertMe
                 TextStatusMessage = string.Empty;
                 TextStatusMessageVisibility = Visibility.Collapsed;
             };
-      
-            this.DataContext = this;        
+
+            this.DataContext = this;
         }
 
         #region "Properties"
@@ -84,7 +86,7 @@ namespace AlertMe
             }
         }
 
- 
+
 
         private string _textStatusMessage;
         public string TextStatusMessage
@@ -173,23 +175,24 @@ namespace AlertMe
 
         #region "Methods"
 
-   
+
         private async void GetGPSLocation()
         {
             try
             {
+
                 prog.IsVisible = true;
                 prog.IsIndeterminate = true;
                 prog.Text = "Getting GPS location...";
 
                 myGeoLocator = new Geolocator();
-                myGeoLocator.DesiredAccuracy = PositionAccuracy.Default;
+                myGeoLocator.DesiredAccuracy = PositionAccuracy.High;
                 myGeoLocator.MovementThreshold = 50;
-             
+
                 Geoposition geoposition = await myGeoLocator.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
 
                 Latitude = geoposition.Coordinate.Latitude;
-                Longitude = geoposition.Coordinate.Longitude;          
+                Longitude = geoposition.Coordinate.Longitude;
 
                 var reverseGeocode = new ReverseGeocodeQuery();
                 reverseGeocode.GeoCoordinate = new GeoCoordinate(geoposition.Coordinate.Latitude, Longitude);
@@ -199,14 +202,17 @@ namespace AlertMe
 
             catch (UnauthorizedAccessException)
             {
+                btnalert.IsEnabled = true;
                 MessageBox.Show(AppResources.GPSDisabled);
             }
             catch (Exception)
             {
+                btnalert.IsEnabled = true;
                 MessageBox.Show(AppResources.GPSDisabled);
             }
             finally
             {
+                btnalert.IsEnabled = true;
                 prog.IsVisible = false;
                 prog.IsIndeterminate = false;
             }
@@ -234,6 +240,9 @@ namespace AlertMe
                         Address = address.HouseNumber + " " + address.Street + " " + address.City + " " + address.State + " " + address.PostalCode;
                     }
                 }
+
+                btnalert.IsEnabled = true;
+
                 prog.IsVisible = false;
                 prog.IsIndeterminate = false;
                 SendTextAlert();
@@ -246,12 +255,12 @@ namespace AlertMe
         private void SendTextAlert()
         {
             try
-            {             
+            {
                 UpdateSentTextCount(1);
                 SmsComposeTask smsComposeTask = new SmsComposeTask();
                 smsComposeTask.To = "";
                 smsComposeTask.Body = AppResources.MyLocationIs + Address;
-                smsComposeTask.Show();                                     
+                smsComposeTask.Show();
             }
             catch (Exception ex)
             {
@@ -272,7 +281,7 @@ namespace AlertMe
             }
 
             App.gSentTextCount = (int)IS.GetSetting("SentTextCount");
-            TextStatusMessage =AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;          
+            TextStatusMessage = AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;
         }
 
         public void GetSettings()
@@ -349,18 +358,37 @@ namespace AlertMe
             {
                 if (_rated)
                 {
-                    MessageBox.Show(AppResources.TrialMessage + App.gTextLimit + AppResources.PleasePurchase);
+                    MessageBoxResult result = MessageBox.Show(AppResources.TrialMessage + App.gTextLimit + AppResources.PleasePurchase, "", MessageBoxButton.OKCancel);
+
+                    if (result == MessageBoxResult.OK)
+                    {
+                        MarketplaceDetailTask marketplaceDetailTask = new MarketplaceDetailTask();
+                        marketplaceDetailTask.Show();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(AppResources.InitialTrial1 + App.gTextLimit + AppResources.InitialTrial2 + App.gTextLimit + AppResources.InitialTrial3);
+                    MessageBoxResult result = MessageBox.Show(AppResources.InitialTrial1 + App.gTextLimit + AppResources.InitialTrial2 + App.gTextLimit + AppResources.InitialTrial3, "", MessageBoxButton.OKCancel);
+
+                    if (result == MessageBoxResult.OK)
+                    {
+                        //If they click ok, take to rating page to rate the app.
+                        MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask();
+                        marketplaceReviewTask.Show();
+                        IS.SaveSetting("AppRated", "Yes");
+                        _rated = true;
+
+                        App.gTextLimit = App.gTextLimitExtended;
+                        TextStatusMessage = AppResources.TrialTextSent + App.gSentTextCount.ToString() + "/" + App.gTextLimit;
+                    }
                 }
             }
             else
             {
-                    
-                   GetGPSLocation();
-             
+                //Disable button so they can't click twice
+                btnalert.IsEnabled = false;
+
+                GetGPSLocation();
             }
         }
 
