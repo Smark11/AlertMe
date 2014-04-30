@@ -56,25 +56,22 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="AlertMeToken" TaskName="_default">
-        <TemplateIconic>
-          <SmallImageURI IsRelative="true" IsResource="false">MapPin-Black110x110.png</SmallImageURI>
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">MapPin-Black99x99.png</SmallImageURI>
           <Count>0</Count>
-          <IconImageURI IsRelative="true" IsResource="false">MapPin-Black202x202.png</IconImageURI>
-          <Title>Here I Am</Title>
-          <Message>
-          </Message>
-          <BackgroundColor>
-          </BackgroundColor>
-          <HasLarge>False</HasLarge>
-          <LargeContent1>
-          </LargeContent1>
-          <LargeContent2>
-          </LargeContent2>
-          <LargeContent3>
-          </LargeContent3>
+          <BackgroundImageURI IsRelative="true" IsResource="false">MapPin-Black300x300.png</BackgroundImageURI>
+          <Title>
+          </Title>
+          <BackContent>
+          </BackContent>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false">
+          </BackBackgroundImageURI>
+          <BackTitle>
+          </BackTitle>
           <DeviceLockImageURI IsRelative="true" IsResource="false">
           </DeviceLockImageURI>
-        </TemplateIconic>
+          <HasLarge>false</HasLarge>
+        </TemplateFlip>
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>

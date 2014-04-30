@@ -89,7 +89,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Label="MultilingualAppToolkit">
-    <ToolkitRevision>2</ToolkitRevision>
+    <MultilingualAppToolkitVersion>3.0</MultilingualAppToolkitVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="About.xaml.cs">
@@ -151,6 +151,8 @@
     <Content Include="MapPin-Animation.png" />
     <Content Include="MapPin-Black110x110.png" />
     <Content Include="MapPin-Black202x202.png" />
+    <Content Include="MapPin-Black300x300.png" />
+    <Content Include="MapPin-Black99x99.png" />
     <Content Include="MapPin-BlackApp.png" />
     <Content Include="MapPin.png" />
     <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />
@@ -565,7 +567,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.WindowsPhone.targets" Label="MultilingualAppToolkitForWindowsPhone" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
